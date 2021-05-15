@@ -112,24 +112,24 @@ void Hoverboard::reconfigure_callback(hoverboard_driver::HoverboardConfig& _conf
 }
 
 void Hoverboard::read() {
-    if (port_fd != -1) {
-        const int max_length = 1024; // HoverboardAPI limit
-        unsigned char c;
-        int i = 0, r = 0;
+  if (port_fd != -1) {
+    const int max_length = 1024; // HoverboardAPI limit
+    unsigned char c;
+    int i = 0, r = 0;
 
-        while ((r = ::read(port_fd, &c, 1)) > 0 && i++ < 1024)
-            api->protocolPush(c);
+    while ((r = ::read(port_fd, &c, 1)) > 0 && i++ < 1024)
+      api->protocolPush(c);
 
-	if (i > 0)
-	  last_read = ros::Time::now();
+    if (i > 0)
+      last_read = ros::Time::now();
 
-	if (r < 0 && errno != EAGAIN)
-	  ROS_ERROR("Reading from serial %s failed: %d", PORT, r);
-    }
+    if (r < 0 && errno != EAGAIN)
+      ROS_ERROR("Reading from serial %s failed: %d", PORT, r);
+  }
 
-    if ((ros::Time::now() - last_read).toSec() > 1) {
-      ROS_FATAL("Timeout reading from serial %s failed", PORT);
-    }
+  if ((ros::Time::now() - last_read).toSec() > 1) {
+    ROS_FATAL("Timeout reading from serial %s failed", PORT);
+  }
 }
 
 void Hoverboard::hallCallback() {
