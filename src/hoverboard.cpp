@@ -152,6 +152,7 @@ void Hoverboard::hallCallback() {
 void Hoverboard::electricalCallback() {
     std_msgs::Float64 f;
 
+    ROS_INFO("electrical Callback");
     f.data = api->getMotorAmpsAvg(0);
     left_cur_pub.publish(f);
 
@@ -175,6 +176,7 @@ void Hoverboard::write() {
     int left_pwm  = joints[0].cmd.data * 30;
     int right_pwm = joints[1].cmd.data * 30;
     api->sendDifferentialPWM (left_pwm, right_pwm);
+    ROS_INFO("PWM send: %d %d", left_pwm, right_pwm);
 #else 
     // Cap according to dynamic_reconfigure
     // Convert rad/s to m/s
@@ -183,6 +185,7 @@ void Hoverboard::write() {
     const int max_power = have_config ? config.MaxPwr : 100;    
     const int min_speed = have_config ? config.MinSpd : 40;
     api->sendSpeedData (left_speed, right_speed, max_power, min_speed);
+    ROS_INFO("speed send: %lf %lf", left_speed, right_speed);
 #endif
 }
 

@@ -1,0 +1,430 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+AA_55	src/bipropellant/src/hbprotocol/protocol.h	/^  unsigned char AA_55;$/;"	m	struct:tag_PROTOCOL_sensor_frame
+ASCII_FUNCTION	src/bipropellant/src/hbprotocol/ascii_protocol.c	/^} ASCII_FUNCTION;$/;"	t	typeref:struct:ASCII_FUNCTION_tag	file:
+ASCII_FUNCTION_tag	src/bipropellant/src/hbprotocol/ascii_protocol.c	/^typedef struct ASCII_FUNCTION_tag {$/;"	s	file:
+ASCII_IMMEDIATE_FUNCTION	src/bipropellant/src/hbprotocol/ascii_protocol.c	/^} ASCII_IMMEDIATE_FUNCTION;$/;"	t	typeref:struct:ASCII_IMMEDIATE_FUNCTION_tag	file:
+ASCII_IMMEDIATE_FUNCTION_tag	src/bipropellant/src/hbprotocol/ascii_protocol.c	/^typedef struct ASCII_IMMEDIATE_FUNCTION_tag {$/;"	s	file:
+Accelleration	src/bipropellant/src/hbprotocol/protocol.h	/^  unsigned char Accelleration;$/;"	m	struct:tag_PROTOCOL_sensor_frame
+Accelleration_duplicate	src/bipropellant/src/hbprotocol/protocol.h	/^  unsigned char Accelleration_duplicate;$/;"	m	struct:tag_PROTOCOL_sensor_frame
+Angle	src/bipropellant/src/hbprotocol/protocol.h	/^  short Angle;$/;"	m	struct:tag_PROTOCOL_sensor_frame
+Angle_duplicate	src/bipropellant/src/hbprotocol/protocol.h	/^  short Angle_duplicate;$/;"	m	struct:tag_PROTOCOL_sensor_frame
+CI	src/bipropellant/src/hbprotocol/examples/nodered/snippets.js	/^var CI = flow.get("CI") || 0;$/;"	v
+CI	src/bipropellant/src/hbprotocol/protocol.h	/^    unsigned char CI; \/\/ continuity counter$/;"	m	struct:tag_PROTOCOL_MSG2
+CONTROL_PWM	include/hoverboard_driver/config.h	8;"	d
+CONTROL_TYPE_MAX	src/bipropellant/src/hbprotocol/protocol.h	181;"	d
+CONTROL_TYPE_NONE	src/bipropellant/src/hbprotocol/protocol.h	177;"	d
+CONTROL_TYPE_POSITION	src/bipropellant/src/hbprotocol/protocol.h	178;"	d
+CONTROL_TYPE_PWM	src/bipropellant/src/hbprotocol/protocol.h	180;"	d
+CONTROL_TYPE_SPEED	src/bipropellant/src/hbprotocol/protocol.h	179;"	d
+CS	src/bipropellant/src/hbprotocol/protocol.h	/^    unsigned char CS;                     \/\/ temporary storage to calculate Checksum$/;"	m	struct:tag_PROTOCOL_STAT
+Codes	src/bipropellant/src/HoverboardAPI.h	/^    enum Codes {$/;"	g	class:HoverboardAPI
+DESCRIPTION	src/bipropellant/src/hbprotocol/protocol.c	/^} DESCRIPTION;$/;"	t	typeref:struct:tag_description	file:
+DESCRIPTIONS	src/bipropellant/src/hbprotocol/protocol.c	/^} DESCRIPTIONS;$/;"	t	typeref:struct:tag_descriptions	file:
+DIRECTION_CORRECTION	include/hoverboard_driver/config.h	4;"	d
+FN_TYPE_POST_READ	src/bipropellant/src/hbprotocol/protocol.h	355;"	d
+FN_TYPE_POST_READRESPONSE	src/bipropellant/src/hbprotocol/protocol.h	359;"	d
+FN_TYPE_POST_WRITE	src/bipropellant/src/hbprotocol/protocol.h	357;"	d
+FN_TYPE_PRE_READ	src/bipropellant/src/hbprotocol/protocol.h	354;"	d
+FN_TYPE_PRE_READRESPONSE	src/bipropellant/src/hbprotocol/protocol.h	358;"	d
+FN_TYPE_PRE_WRITE	src/bipropellant/src/hbprotocol/protocol.h	356;"	d
+HallData	src/bipropellant/src/protocolFunctions.c	/^volatile PROTOCOL_HALL_DATA_STRUCT HallData[2];$/;"	v
+HallPosn	src/bipropellant/src/hbprotocol/protocol.h	/^    long HallPosn; \/\/ 90 per revolution$/;"	m	struct:tag_PROTOCOL_HALL_DATA_STRUCT
+HallPosnMultiplier	src/bipropellant/src/hbprotocol/protocol.h	/^    float HallPosnMultiplier; \/\/ m per hall segment$/;"	m	struct:tag_PROTOCOL_HALL_DATA_STRUCT
+HallPosn_lastread	src/bipropellant/src/hbprotocol/protocol.h	/^    long HallPosn_lastread; \/\/ posn offset set via protocol in raw value$/;"	m	struct:tag_PROTOCOL_HALL_DATA_STRUCT
+HallPosn_mm	src/bipropellant/src/hbprotocol/protocol.h	/^    long HallPosn_mm; \/\/ posn in mm$/;"	m	struct:tag_PROTOCOL_HALL_DATA_STRUCT
+HallPosn_mm_lastread	src/bipropellant/src/hbprotocol/protocol.h	/^    long HallPosn_mm_lastread; \/\/ posn offset set via protocol in mm$/;"	m	struct:tag_PROTOCOL_HALL_DATA_STRUCT
+HallSkipped	src/bipropellant/src/hbprotocol/protocol.h	/^    unsigned long HallSkipped;$/;"	m	struct:tag_PROTOCOL_HALL_DATA_STRUCT
+HallSpeed	src/bipropellant/src/hbprotocol/protocol.h	/^    long HallSpeed; \/\/ speed part calibrated to speed demand value$/;"	m	struct:tag_PROTOCOL_HALL_DATA_STRUCT
+HallSpeed_mm_per_s	src/bipropellant/src/hbprotocol/protocol.h	/^    long HallSpeed_mm_per_s; \/\/ speed in m\/s$/;"	m	struct:tag_PROTOCOL_HALL_DATA_STRUCT
+HallTimeDiff	src/bipropellant/src/hbprotocol/protocol.h	/^    unsigned long HallTimeDiff;$/;"	m	struct:tag_PROTOCOL_HALL_DATA_STRUCT
+Hoverboard	include/hoverboard_driver/hoverboard.h	/^class Hoverboard : public hardware_interface::RobotHW {$/;"	c
+Hoverboard	src/hoverboard.cpp	/^Hoverboard::Hoverboard() {$/;"	f	class:Hoverboard
+HoverboardAPI	src/bipropellant/src/HoverboardAPI.cpp	/^HoverboardAPI::HoverboardAPI(int (*send_serial_data)( unsigned char *data, int len )) {$/;"	f	class:HoverboardAPI
+HoverboardAPI	src/bipropellant/src/HoverboardAPI.h	/^class HoverboardAPI$/;"	c
+Joint	include/hoverboard_driver/hoverboard.h	/^    struct Joint {$/;"	s	class:Hoverboard
+Left	src/bipropellant/src/hbprotocol/protocol.h	/^    long Left;$/;"	m	struct:tag_PROTOCOL_POSN_INCR
+LeftAbsolute	src/bipropellant/src/hbprotocol/protocol.h	/^    long LeftAbsolute;$/;"	m	struct:tag_PROTOCOL_POSN
+LeftOffset	src/bipropellant/src/hbprotocol/protocol.h	/^    long LeftOffset;$/;"	m	struct:tag_PROTOCOL_POSN
+MACHINE_PROTOCOL_TX_BUFFER	src/bipropellant/src/hbprotocol/protocol.h	/^} MACHINE_PROTOCOL_TX_BUFFER;$/;"	t	typeref:struct:tag_MACHINE_PROTOCOL_TX_BUFFER
+MACHINE_PROTOCOL_TX_BUFFER_SIZE	src/bipropellant/src/hbprotocol/protocol.h	214;"	d
+PACKAGE	config/Hoverboard.cfg	/^PACKAGE = "hoverboard_driver"$/;"	v
+PARAMSTAT	src/bipropellant/src/hbprotocol/protocol.h	/^typedef struct tag_PARAMSTAT PARAMSTAT;$/;"	t	typeref:struct:tag_PARAMSTAT
+PARAMSTAT_FN	src/bipropellant/src/hbprotocol/protocol.h	/^typedef void (*PARAMSTAT_FN)( PROTOCOL_STAT *s, PARAMSTAT *param, uint8_t fn_type, unsigned char *content, int len );$/;"	t
+PARAM_R	src/bipropellant/src/hbprotocol/protocol.h	330;"	d
+PARAM_RW	src/bipropellant/src/hbprotocol/protocol.h	331;"	d
+PORT	include/hoverboard_driver/config.h	3;"	d
+PROTOCOLCOUNT	src/bipropellant/src/hbprotocol/protocol.h	/^} PROTOCOLCOUNT;$/;"	t	typeref:struct:tag_PROTOCOLCOUNT
+PROTOCOLSTATE	src/bipropellant/src/hbprotocol/protocol.h	/^} PROTOCOLSTATE;$/;"	t	typeref:struct:tag_PROTOCOLSTATE
+PROTOCOL_ACK_TX_IDLE	src/bipropellant/src/hbprotocol/machine_protocol.c	51;"	d	file:
+PROTOCOL_ACK_TX_WAITING	src/bipropellant/src/hbprotocol/machine_protocol.c	52;"	d	file:
+PROTOCOL_BUZZER_DATA	src/bipropellant/src/hbprotocol/protocol.h	/^} PROTOCOL_BUZZER_DATA;$/;"	t	typeref:struct:__anon1
+PROTOCOL_BYTES	src/bipropellant/src/hbprotocol/protocol_private.h	/^} PROTOCOL_BYTES;$/;"	t	typeref:struct:tag_PROTOCOL_BYTES
+PROTOCOL_BYTES_READVALS	src/bipropellant/src/hbprotocol/protocol_private.h	/^} PROTOCOL_BYTES_READVALS;$/;"	t	typeref:struct:tag_PROTOCOL_BYTES_READVALS
+PROTOCOL_BYTES_WRITEVALS	src/bipropellant/src/hbprotocol/protocol_private.h	/^} PROTOCOL_BYTES_WRITEVALS;$/;"	t	typeref:struct:tag_PROTOCOL_BYTES_WRITEVALS
+PROTOCOL_CMD_ACK	src/bipropellant/src/hbprotocol/protocol.h	303;"	d
+PROTOCOL_CMD_NACK	src/bipropellant/src/hbprotocol/protocol.h	305;"	d
+PROTOCOL_CMD_READVAL	src/bipropellant/src/hbprotocol/protocol.h	322;"	d
+PROTOCOL_CMD_READVALRESPONSE	src/bipropellant/src/hbprotocol/protocol.h	323;"	d
+PROTOCOL_CMD_REBOOT	src/bipropellant/src/hbprotocol/protocol.h	312;"	d
+PROTOCOL_CMD_TEST	src/bipropellant/src/hbprotocol/protocol.h	308;"	d
+PROTOCOL_CMD_TESTRESPONSE	src/bipropellant/src/hbprotocol/protocol.h	309;"	d
+PROTOCOL_CMD_UNKNOWN	src/bipropellant/src/hbprotocol/protocol.h	315;"	d
+PROTOCOL_CMD_WRITEVAL	src/bipropellant/src/hbprotocol/protocol.h	324;"	d
+PROTOCOL_CMD_WRITEVALRESPONSE	src/bipropellant/src/hbprotocol/protocol.h	325;"	d
+PROTOCOL_ELECTRICAL_PARAMS	src/bipropellant/src/hbprotocol/protocol.h	/^} PROTOCOL_ELECTRICAL_PARAMS;$/;"	t	typeref:struct:tag_PROTOCOL_ELECTRICAL_PARAMS
+PROTOCOL_HALL_DATA_STRUCT	src/bipropellant/src/hbprotocol/protocol.h	/^} PROTOCOL_HALL_DATA_STRUCT;$/;"	t	typeref:struct:tag_PROTOCOL_HALL_DATA_STRUCT
+PROTOCOL_INTEGER_XYT_POSN	src/bipropellant/src/hbprotocol/protocol.h	/^} PROTOCOL_INTEGER_XYT_POSN;$/;"	t	typeref:struct:PROTOCOL_INTEGER_XYT_POSN_tag
+PROTOCOL_INTEGER_XYT_POSN_tag	src/bipropellant/src/hbprotocol/protocol.h	/^typedef struct PROTOCOL_INTEGER_XYT_POSN_tag {$/;"	s
+PROTOCOL_LEN_ONWARDS	src/bipropellant/src/hbprotocol/protocol_private.h	/^} PROTOCOL_LEN_ONWARDS;$/;"	t	typeref:struct:tag_PROTOCOL_LEN_ONWARDS
+PROTOCOL_MOTOR_ELECTRICAL	src/bipropellant/src/hbprotocol/protocol.h	/^} PROTOCOL_MOTOR_ELECTRICAL;$/;"	t	typeref:struct:tag_PROTOCOL_MOTOR_ELECTRICAL
+PROTOCOL_MSG2	src/bipropellant/src/hbprotocol/protocol.h	/^} PROTOCOL_MSG2;$/;"	t	typeref:struct:tag_PROTOCOL_MSG2
+PROTOCOL_POSN	src/bipropellant/src/hbprotocol/protocol.h	/^} PROTOCOL_POSN;$/;"	t	typeref:struct:tag_PROTOCOL_POSN
+PROTOCOL_POSN_DATA	src/bipropellant/src/hbprotocol/protocol.h	/^} PROTOCOL_POSN_DATA;$/;"	t	typeref:struct:tag_PROTOCOL_POSN_DATA
+PROTOCOL_POSN_INCR	src/bipropellant/src/hbprotocol/protocol.h	/^} PROTOCOL_POSN_INCR;$/;"	t	typeref:struct:tag_PROTOCOL_POSN_INCR
+PROTOCOL_PWM_DATA	src/bipropellant/src/hbprotocol/protocol.h	/^} PROTOCOL_PWM_DATA;$/;"	t	typeref:struct:tag_PROTOCOL_PWM_DATA
+PROTOCOL_SENSOR_FRAME	src/bipropellant/src/hbprotocol/protocol.h	/^} PROTOCOL_SENSOR_FRAME;$/;"	t	typeref:struct:tag_PROTOCOL_sensor_frame
+PROTOCOL_SOM	src/bipropellant/src/hbprotocol/examples/nodered/snippets.js	/^var PROTOCOL_SOM = 2;$/;"	v
+PROTOCOL_SOM_ACK	src/bipropellant/src/hbprotocol/protocol.h	317;"	d
+PROTOCOL_SOM_NOACK	src/bipropellant/src/hbprotocol/protocol.h	318;"	d
+PROTOCOL_SPEED_DATA	src/bipropellant/src/hbprotocol/protocol.h	/^} PROTOCOL_SPEED_DATA;$/;"	t	typeref:struct:tag_PROTOCOL_SPEED_DATA
+PROTOCOL_STAT	src/bipropellant/src/hbprotocol/protocol.h	/^} PROTOCOL_STAT;$/;"	t	typeref:struct:tag_PROTOCOL_STAT
+PROTOCOL_STATE_BADCHAR	src/bipropellant/src/hbprotocol/machine_protocol.c	49;"	d	file:
+PROTOCOL_STATE_IDLE	src/bipropellant/src/hbprotocol/examples/nodered/snippets.js	/^var states = {$/;"	p	class:states
+PROTOCOL_STATE_IDLE	src/bipropellant/src/hbprotocol/machine_protocol.c	45;"	d	file:
+PROTOCOL_STATE_WAIT_CI	src/bipropellant/src/hbprotocol/examples/nodered/snippets.js	/^    PROTOCOL_STATE_IDLE:0,$/;"	p	class:states
+PROTOCOL_STATE_WAIT_CI	src/bipropellant/src/hbprotocol/machine_protocol.c	47;"	d	file:
+PROTOCOL_STATE_WAIT_END	src/bipropellant/src/hbprotocol/examples/nodered/snippets.js	/^    PROTOCOL_STATE_WAIT_LEN:2,$/;"	p	class:states
+PROTOCOL_STATE_WAIT_END	src/bipropellant/src/hbprotocol/machine_protocol.c	48;"	d	file:
+PROTOCOL_STATE_WAIT_LEN	src/bipropellant/src/hbprotocol/examples/nodered/snippets.js	/^    PROTOCOL_STATE_WAIT_CI:1,$/;"	p	class:states
+PROTOCOL_STATE_WAIT_LEN	src/bipropellant/src/hbprotocol/machine_protocol.c	46;"	d	file:
+PROTOCOL_SUBSCRIBEDATA	src/bipropellant/src/hbprotocol/protocol.h	/^} PROTOCOL_SUBSCRIBEDATA;$/;"	t	typeref:struct:tag_PROTOCOL_SUBSCRIBEDATA
+ProtocolcountData	src/bipropellant/src/hbprotocol/protocol.c	/^PROTOCOLCOUNT ProtocolcountData =  { .rx = 0 };$/;"	v
+Right	src/bipropellant/src/hbprotocol/protocol.h	/^    long Right;$/;"	m	struct:tag_PROTOCOL_POSN_INCR
+RightAbsolute	src/bipropellant/src/hbprotocol/protocol.h	/^    long RightAbsolute;$/;"	m	struct:tag_PROTOCOL_POSN
+RightOffset	src/bipropellant/src/hbprotocol/protocol.h	/^    long RightOffset;$/;"	m	struct:tag_PROTOCOL_POSN
+Roll	src/bipropellant/src/hbprotocol/protocol.h	/^  short Roll;$/;"	m	struct:tag_PROTOCOL_sensor_frame
+SOM	src/bipropellant/src/hbprotocol/protocol.h	/^    unsigned char SOM; \/\/ 0x02$/;"	m	struct:tag_PROTOCOL_MSG2
+SpeedData	src/bipropellant/src/protocolFunctions.c	/^volatile PROTOCOL_SPEED_DATA SpeedData;$/;"	v
+TxBuffer	src/bipropellant/src/hbprotocol/protocol.h	/^    MACHINE_PROTOCOL_TX_BUFFER TxBuffer;     \/\/ Buffer for Messages to be sent$/;"	m	struct:tag_PROTOCOLSTATE
+UI_2CHAR	src/bipropellant/src/hbprotocol/protocol.h	345;"	d
+UI_2LONG	src/bipropellant/src/hbprotocol/protocol.h	347;"	d
+UI_2LONGLONG	src/bipropellant/src/hbprotocol/protocol.h	348;"	d
+UI_2SHORT	src/bipropellant/src/hbprotocol/protocol.h	346;"	d
+UI_3LONG	src/bipropellant/src/hbprotocol/protocol.h	349;"	d
+UI_CHAR	src/bipropellant/src/hbprotocol/protocol.h	341;"	d
+UI_LONG	src/bipropellant/src/hbprotocol/protocol.h	343;"	d
+UI_LONGLONG	src/bipropellant/src/hbprotocol/protocol.h	344;"	d
+UI_NONE	src/bipropellant/src/hbprotocol/protocol.h	340;"	d
+UI_SHORT	src/bipropellant/src/hbprotocol/protocol.h	342;"	d
+WHEEL_RADIUS	include/hoverboard_driver/config.h	5;"	d
+ack	src/bipropellant/src/hbprotocol/protocol.h	/^    PROTOCOLSTATE ack;$/;"	m	struct:tag_PROTOCOL_STAT
+allow_ascii	src/bipropellant/src/hbprotocol/protocol.h	/^    char allow_ascii;                     \/\/ If set to 0, ascii protocol is not used$/;"	m	struct:tag_PROTOCOL_STAT
+api	include/hoverboard_driver/hoverboard.h	/^    HoverboardAPI *api;$/;"	m	class:Hoverboard
+asciiProtocolUnlocked	src/bipropellant/src/hbprotocol/ascii_protocol.c	/^static int8_t asciiProtocolUnlocked = 0;$/;"	v	file:
+ascii_add_immediate	src/bipropellant/src/hbprotocol/ascii_protocol.c	/^void ascii_add_immediate( unsigned char letter, int (*fn)(PROTOCOL_STAT *s, char byte,  char *ascii_out), char* description ) {$/;"	f
+ascii_add_line_fn	src/bipropellant/src/hbprotocol/ascii_protocol.c	/^void ascii_add_line_fn( unsigned char letter, int (*fn)(PROTOCOL_STAT *s, char *line, char *ascii_out), char *description ) {$/;"	f
+ascii_byte	src/bipropellant/src/hbprotocol/ascii_protocol.c	/^void ascii_byte(PROTOCOL_STAT *s, unsigned char byte ){$/;"	f
+ascii_cmd	src/bipropellant/src/hbprotocol/ascii_protocol.c	/^static char ascii_cmd[20];$/;"	v	file:
+ascii_init	src/bipropellant/src/hbprotocol/ascii_protocol.c	/^int ascii_init() {$/;"	f
+ascii_out	src/bipropellant/src/hbprotocol/ascii_protocol.c	/^static char ascii_out[512];$/;"	v	file:
+ascii_posn	src/bipropellant/src/hbprotocol/ascii_protocol.c	/^static int ascii_posn = 0;$/;"	v	file:
+bat_raw	src/bipropellant/src/hbprotocol/protocol.h	/^    int bat_raw;$/;"	m	struct:tag_PROTOCOL_ELECTRICAL_PARAMS
+batteryVoltage	src/bipropellant/src/hbprotocol/protocol.h	/^    float batteryVoltage;$/;"	m	struct:tag_PROTOCOL_ELECTRICAL_PARAMS
+board_temp_deg_c	src/bipropellant/src/hbprotocol/protocol.h	/^    float board_temp_deg_c;$/;"	m	struct:tag_PROTOCOL_ELECTRICAL_PARAMS
+board_temp_filtered	src/bipropellant/src/hbprotocol/protocol.h	/^    float board_temp_filtered;$/;"	m	struct:tag_PROTOCOL_ELECTRICAL_PARAMS
+board_temp_raw	src/bipropellant/src/hbprotocol/protocol.h	/^    int board_temp_raw;$/;"	m	struct:tag_PROTOCOL_ELECTRICAL_PARAMS
+buff	src/bipropellant/src/hbprotocol/protocol.h	/^    volatile unsigned char buff[MACHINE_PROTOCOL_TX_BUFFER_SIZE];$/;"	m	struct:tag_MACHINE_PROTOCOL_TX_BUFFER
+build_arcada_platforms	src/bipropellant/scripts/installArduino.sh	/^function build_arcada_platforms()$/;"	f
+build_aux_platforms	src/bipropellant/scripts/installArduino.sh	/^function build_aux_platforms()$/;"	f
+build_cplay_platforms	src/bipropellant/scripts/installArduino.sh	/^function build_cplay_platforms()$/;"	f
+build_io_platforms	src/bipropellant/scripts/installArduino.sh	/^function build_io_platforms()$/;"	f
+build_m4_platforms	src/bipropellant/scripts/installArduino.sh	/^function build_m4_platforms()$/;"	f
+build_main_platforms	src/bipropellant/scripts/installArduino.sh	/^function build_main_platforms()$/;"	f
+build_nrf5x_platforms	src/bipropellant/scripts/installArduino.sh	/^function build_nrf5x_platforms()$/;"	f
+build_platform	src/bipropellant/scripts/installArduino.sh	/^function build_platform()$/;"	f
+build_samd_platforms	src/bipropellant/scripts/installArduino.sh	/^function build_samd_platforms()$/;"	f
+buzzerFreq	src/bipropellant/src/hbprotocol/protocol.h	/^    uint8_t buzzerFreq;$/;"	m	struct:__anon1
+buzzerLen	src/bipropellant/src/hbprotocol/protocol.h	/^    uint16_t buzzerLen;$/;"	m	struct:__anon1
+buzzerPattern	src/bipropellant/src/hbprotocol/protocol.h	/^    uint8_t buzzerPattern;$/;"	m	struct:__anon1
+bytes	src/bipropellant/src/hbprotocol/protocol.h	/^    unsigned char bytes[255];  \/\/ variable number of data bytes, with a checksum on the end, cmd is first$/;"	m	struct:tag_PROTOCOL_MSG2
+bytes	src/bipropellant/src/hbprotocol/protocol_private.h	/^    unsigned char bytes[sizeof( ((PROTOCOL_MSG2 *)0)->bytes ) - sizeof(unsigned char)]; \/\/ cmd is part of bytes and needs to be substracted$/;"	m	struct:tag_PROTOCOL_BYTES
+bytes	src/bipropellant/src/hbprotocol/protocol_private.h	/^    unsigned char bytes[sizeof( ((PROTOCOL_MSG2 *)0)->bytes )];  \/\/ variable number of data bytes, with a checksum on the end, cmd is first$/;"	m	struct:tag_PROTOCOL_LEN_ONWARDS
+charging	src/bipropellant/src/hbprotocol/protocol.h	/^    int charging;$/;"	m	struct:tag_PROTOCOL_ELECTRICAL_PARAMS
+cmd	include/hoverboard_driver/hoverboard.h	/^        std_msgs::Float64 cmd;$/;"	m	struct:Hoverboard::Joint
+cmd	src/bipropellant/src/hbprotocol/protocol_private.h	/^    unsigned char cmd; \/\/ 'R'$/;"	m	struct:tag_PROTOCOL_BYTES_READVALS
+cmd	src/bipropellant/src/hbprotocol/protocol_private.h	/^    unsigned char cmd; \/\/ 'W'$/;"	m	struct:tag_PROTOCOL_BYTES_WRITEVALS
+cmd	src/bipropellant/src/hbprotocol/protocol_private.h	/^    unsigned char cmd; \/\/$/;"	m	struct:tag_PROTOCOL_BYTES
+code	src/bipropellant/src/hbprotocol/protocol.c	/^    unsigned char code;   \/\/ code from params$/;"	m	struct:tag_description	file:
+code	src/bipropellant/src/hbprotocol/protocol.h	/^    char code;                       \/\/ code in protocol to refer to this$/;"	m	struct:tag_PROTOCOL_SUBSCRIBEDATA
+code	src/bipropellant/src/hbprotocol/protocol.h	/^    unsigned char code;     \/\/ code in protocol to refer to this$/;"	m	struct:tag_PARAMSTAT
+code	src/bipropellant/src/hbprotocol/protocol_private.h	/^    unsigned char code; \/\/ code of value to read$/;"	m	struct:tag_PROTOCOL_BYTES_READVALS
+code	src/bipropellant/src/hbprotocol/protocol_private.h	/^    unsigned char code; \/\/ code of value to write$/;"	m	struct:tag_PROTOCOL_BYTES_WRITEVALS
+config	include/hoverboard_driver/hoverboard.h	/^    hoverboard_driver::HoverboardConfig config;$/;"	m	class:Hoverboard
+content	src/bipropellant/src/hbprotocol/protocol_private.h	/^    unsigned char content[sizeof( ((PROTOCOL_MSG2 *)0)->bytes ) - sizeof(unsigned char) - sizeof(unsigned char)]; \/\/ cmd and code are part of bytes and need to be substracted$/;"	m	struct:tag_PROTOCOL_BYTES_WRITEVALS
+contentbuf	src/bipropellant/src/hbprotocol/protocol.c	/^unsigned char contentbuf[sizeof( ((PROTOCOL_BYTES_WRITEVALS *)0)->content )];$/;"	v
+count	src/bipropellant/src/hbprotocol/protocol.h	/^    int count;                       \/\/ how many messages shall be sent? -1 for infinity$/;"	m	struct:tag_PROTOCOL_SUBSCRIBEDATA
+count	src/bipropellant/src/hbprotocol/protocol.h	/^    unsigned char count;                  \/\/ index pointing to last received byte$/;"	m	struct:tag_PROTOCOL_STAT
+count_read	src/bipropellant/src/hbprotocol/protocol.c	/^    unsigned char count_read;$/;"	m	struct:tag_descriptions	file:
+counters	src/bipropellant/src/hbprotocol/protocol.h	/^    PROTOCOLCOUNT counters;                  \/\/ Statistical data of the protocol performance$/;"	m	struct:tag_PROTOCOLSTATE
+cs	src/bipropellant/src/hbprotocol/examples/nodered/snippets.js	/^var cs = 0;$/;"	v
+curr_msg	src/bipropellant/src/hbprotocol/protocol.h	/^    PROTOCOL_MSG2 curr_msg;               \/\/ received message storage$/;"	m	struct:tag_PROTOCOL_STAT
+curr_send_msg	src/bipropellant/src/hbprotocol/protocol.h	/^    PROTOCOL_MSG2 curr_send_msg;             \/\/ transmit message storage$/;"	m	struct:tag_PROTOCOLSTATE
+dcAmps	src/bipropellant/src/hbprotocol/protocol.h	/^        float dcAmps;$/;"	m	struct:tag_PROTOCOL_MOTOR_ELECTRICAL
+dcAmpsAvg	src/bipropellant/src/hbprotocol/protocol.h	/^        float dcAmpsAvg;$/;"	m	struct:tag_PROTOCOL_MOTOR_ELECTRICAL
+dcAmpsAvgAcc	src/bipropellant/src/hbprotocol/protocol.h	/^        float dcAmpsAvgAcc;$/;"	m	struct:tag_PROTOCOL_MOTOR_ELECTRICAL
+dcAmpsx100	src/bipropellant/src/hbprotocol/protocol.h	/^        int dcAmpsx100;$/;"	m	struct:tag_PROTOCOL_MOTOR_ELECTRICAL
+dcCurLim	src/bipropellant/src/hbprotocol/protocol.h	/^    int dcCurLim; \/\/ amps*100$/;"	m	struct:tag_PROTOCOL_ELECTRICAL_PARAMS
+dc_adc_limit	src/bipropellant/src/hbprotocol/protocol.h	/^    int dc_adc_limit; \/\/ limit expressed in terms of ADC units.$/;"	m	struct:tag_PROTOCOL_ELECTRICAL_PARAMS
+debugOut	src/bipropellant/src/HoverboardAPI.h	/^  debugOut                 = 0x0B,$/;"	e	enum:HoverboardAPI::Codes
+degrees	src/bipropellant/src/hbprotocol/protocol.h	/^    long degrees;$/;"	m	struct:PROTOCOL_INTEGER_XYT_POSN_tag
+delay	src/bipropellant/src/HoverboardAPI.cpp	/^void delay(uint32_t ms) { $/;"	f
+description	src/bipropellant/src/hbprotocol/ascii_protocol.c	/^    char *description;$/;"	m	struct:ASCII_FUNCTION_tag	file:
+description	src/bipropellant/src/hbprotocol/ascii_protocol.c	/^    char *description;$/;"	m	struct:ASCII_IMMEDIATE_FUNCTION_tag	file:
+description	src/bipropellant/src/hbprotocol/protocol.c	/^    char description[249];\/\/ nul term description$/;"	m	struct:tag_description	file:
+description	src/bipropellant/src/hbprotocol/protocol.h	/^    char *description;      \/\/ if non-null, description$/;"	m	struct:tag_PARAMSTAT
+descriptions	src/bipropellant/src/hbprotocol/protocol.c	/^    char descriptions[251];$/;"	m	struct:tag_descriptions	file:
+disablePoweroff	src/bipropellant/src/HoverboardAPI.h	/^  disablePoweroff          = 0x0A,$/;"	e	enum:HoverboardAPI::Codes
+disablePoweroffTimer	src/bipropellant/src/HoverboardAPI.cpp	/^void HoverboardAPI::disablePoweroffTimer(char som) {$/;"	f	class:HoverboardAPI
+dsrv	include/hoverboard_driver/hoverboard.h	/^    dynamic_reconfigure::Server<hoverboard_driver::HoverboardConfig> *dsrv;$/;"	m	class:Hoverboard
+eff	include/hoverboard_driver/hoverboard.h	/^        std_msgs::Float64 eff;$/;"	m	struct:Hoverboard::Joint
+electricalCallback	src/hoverboard.cpp	/^void Hoverboard::electricalCallback() {$/;"	f	class:Hoverboard
+electrical_measurements	src/bipropellant/src/protocolFunctions.c	/^volatile PROTOCOL_ELECTRICAL_PARAMS electrical_measurements;$/;"	v
+enableMotors	src/bipropellant/src/HoverboardAPI.h	/^  enableMotors             = 0x09,$/;"	e	enum:HoverboardAPI::Codes
+enable_immediate	src/bipropellant/src/hbprotocol/ascii_protocol.c	/^int enable_immediate = 0;$/;"	v
+first	src/bipropellant/src/hbprotocol/protocol.c	/^    unsigned char first;$/;"	m	struct:tag_descriptions	file:
+flatten_submodule	src/bipropellant/scripts/update_arduino_branch.sh	/^flatten_submodule() {$/;"	f
+fn	src/bipropellant/src/hbprotocol/ascii_protocol.c	/^    int (*fn)(PROTOCOL_STAT *s, char *line, char *ascii_out);$/;"	m	struct:ASCII_FUNCTION_tag	file:
+fn	src/bipropellant/src/hbprotocol/ascii_protocol.c	/^    int (*fn)(PROTOCOL_STAT *s, char byte,  char *ascii_out);$/;"	m	struct:ASCII_IMMEDIATE_FUNCTION_tag	file:
+fn	src/bipropellant/src/hbprotocol/protocol.h	/^    PARAMSTAT_FN fn;        \/\/ function to handle events$/;"	m	struct:tag_PARAMSTAT
+fn_ProtocolcountDataAck	src/bipropellant/src/hbprotocol/protocol.c	/^void fn_ProtocolcountDataAck ( PROTOCOL_STAT *s, PARAMSTAT *param, uint8_t fn_type, unsigned char *content, int len ) {$/;"	f
+fn_ProtocolcountDataNoack	src/bipropellant/src/hbprotocol/protocol.c	/^void fn_ProtocolcountDataNoack ( PROTOCOL_STAT *s, PARAMSTAT *param, uint8_t fn_type, unsigned char *content, int len ) {$/;"	f
+fn_ProtocolcountDataSum	src/bipropellant/src/hbprotocol/protocol.c	/^void fn_ProtocolcountDataSum ( PROTOCOL_STAT *s, PARAMSTAT *param, uint8_t fn_type, unsigned char *content, int len ) {$/;"	f
+fn_SubscribeData	src/bipropellant/src/hbprotocol/protocol.c	/^void fn_SubscribeData ( PROTOCOL_STAT *s, PARAMSTAT *param, uint8_t fn_type, unsigned char *content, int len ) {$/;"	f
+fn_paramstat_descriptions	src/bipropellant/src/hbprotocol/protocol.c	/^void fn_paramstat_descriptions ( PROTOCOL_STAT *s, PARAMSTAT *param, uint8_t fn_type, unsigned char *content, int len ){$/;"	f
+fn_preWriteClear	src/bipropellant/src/hbprotocol/protocol.c	/^void fn_preWriteClear ( PROTOCOL_STAT *s, PARAMSTAT *param, uint8_t fn_type, unsigned char *content, int len ) {$/;"	f
+gen	config/Hoverboard.cfg	/^gen = ParameterGenerator()$/;"	v
+getBatteryVoltage	src/bipropellant/src/HoverboardAPI.cpp	/^float HoverboardAPI::getBatteryVoltage() {$/;"	f	class:HoverboardAPI
+getInstance	src/hoverboard.cpp	/^Hoverboard& Hoverboard::getInstance() {$/;"	f	class:Hoverboard
+getMotorAmpsAvg	src/bipropellant/src/HoverboardAPI.cpp	/^float HoverboardAPI::getMotorAmpsAvg(uint8_t motor) {$/;"	f	class:HoverboardAPI
+getParamHandler	src/bipropellant/src/hbprotocol/protocol.c	/^PARAMSTAT_FN getParamHandler(unsigned char code) {$/;"	f
+getPosition0_mm	src/bipropellant/src/HoverboardAPI.cpp	/^double HoverboardAPI::getPosition0_mm() {$/;"	f	class:HoverboardAPI
+getPosition1_mm	src/bipropellant/src/HoverboardAPI.cpp	/^double HoverboardAPI::getPosition1_mm() {$/;"	f	class:HoverboardAPI
+getSpeed0_kmh	src/bipropellant/src/HoverboardAPI.cpp	/^double HoverboardAPI::getSpeed0_kmh() {$/;"	f	class:HoverboardAPI
+getSpeed0_mms	src/bipropellant/src/HoverboardAPI.cpp	/^double HoverboardAPI::getSpeed0_mms() {$/;"	f	class:HoverboardAPI
+getSpeed1_kmh	src/bipropellant/src/HoverboardAPI.cpp	/^double HoverboardAPI::getSpeed1_kmh() {$/;"	f	class:HoverboardAPI
+getSpeed1_mms	src/bipropellant/src/HoverboardAPI.cpp	/^double HoverboardAPI::getSpeed1_mms() {$/;"	f	class:HoverboardAPI
+getSpeed_kmh	src/bipropellant/src/HoverboardAPI.cpp	/^double HoverboardAPI::getSpeed_kmh() {$/;"	f	class:HoverboardAPI
+getSpeed_mms	src/bipropellant/src/HoverboardAPI.cpp	/^double HoverboardAPI::getSpeed_mms() {$/;"	f	class:HoverboardAPI
+getSteer_kmh	src/bipropellant/src/HoverboardAPI.cpp	/^double HoverboardAPI::getSteer_kmh() {$/;"	f	class:HoverboardAPI
+getSteer_mms	src/bipropellant/src/HoverboardAPI.cpp	/^double HoverboardAPI::getSteer_mms() {$/;"	f	class:HoverboardAPI
+getTxBufferLevel	src/bipropellant/src/HoverboardAPI.cpp	/^int HoverboardAPI::getTxBufferLevel() {$/;"	f	class:HoverboardAPI
+hallCallback	src/hoverboard.cpp	/^void Hoverboard::hallCallback() {$/;"	f	class:Hoverboard
+hallmm	src/bipropellant/src/hbprotocol/examples/nodered/snippets.js	/^                out = {$/;"	p	class:case
+have_config	include/hoverboard_driver/hoverboard.h	/^    bool have_config = false;$/;"	m	class:Hoverboard
+head	src/bipropellant/src/hbprotocol/protocol.h	/^    volatile int head;$/;"	m	struct:tag_MACHINE_PROTOCOL_TX_BUFFER
+header_00	src/bipropellant/src/hbprotocol/protocol.h	/^  unsigned char header_00; \/\/ this byte gets 0x100 (9 bit serial)$/;"	m	struct:tag_PROTOCOL_sensor_frame
+i	src/bipropellant/src/hbprotocol/examples/nodered/snippets.js	/^var i;$/;"	v
+immediate_functions	src/bipropellant/src/hbprotocol/ascii_protocol.c	/^static ASCII_IMMEDIATE_FUNCTION immediate_functions[256];$/;"	v	file:
+initialised	src/bipropellant/src/hbprotocol/ascii_protocol.c	/^static int initialised = 0;$/;"	v	file:
+initialised_functions	src/bipropellant/src/hbprotocol/protocol.c	/^static int initialised_functions = 0;$/;"	v	file:
+initialparams	src/bipropellant/src/hbprotocol/protocol.c	/^PARAMSTAT initialparams[] = {$/;"	v
+joint_state_interface	include/hoverboard_driver/hoverboard.h	/^    hardware_interface::JointStateInterface joint_state_interface;$/;"	m	class:Hoverboard
+joints	include/hoverboard_driver/hoverboard.h	/^    } joints[2];$/;"	m	class:Hoverboard	typeref:struct:Hoverboard::Joint
+json_main_platforms	src/bipropellant/scripts/installArduino.sh	/^function json_main_platforms()$/;"	f
+json_platform	src/bipropellant/scripts/installArduino.sh	/^function json_platform()$/;"	f
+json_sketch	src/bipropellant/scripts/installArduino.sh	/^function json_sketch()$/;"	f
+lastRXCI	src/bipropellant/src/hbprotocol/protocol.h	/^    int lastRXCI;                            \/\/ CI of last received message in ACKed stream$/;"	m	struct:tag_PROTOCOLSTATE
+lastTXCI	src/bipropellant/src/hbprotocol/protocol.h	/^    int lastTXCI;                            \/\/ CI of last sent message$/;"	m	struct:tag_PROTOCOLSTATE
+last_char_time	src/bipropellant/src/hbprotocol/protocol.h	/^    unsigned long last_char_time;         \/\/ last time a character was received$/;"	m	struct:tag_PROTOCOL_STAT
+last_read	include/hoverboard_driver/hoverboard.h	/^    ros::Time last_read;$/;"	m	class:Hoverboard
+last_send_time	src/bipropellant/src/hbprotocol/protocol.h	/^    unsigned long last_send_time;            \/\/ last time a message requiring an ACK was sent$/;"	m	struct:tag_PROTOCOLSTATE
+last_tick_time	src/bipropellant/src/hbprotocol/protocol.h	/^    unsigned long last_tick_time;         \/\/ last time the tick function was called$/;"	m	struct:tag_PROTOCOL_STAT
+left_cmd_pub	include/hoverboard_driver/hoverboard.h	/^    ros::Publisher left_cmd_pub, right_cmd_pub;$/;"	m	class:Hoverboard
+left_cur_pub	include/hoverboard_driver/hoverboard.h	/^    ros::Publisher left_cur_pub, right_cur_pub;$/;"	m	class:Hoverboard
+left_eff_pub	include/hoverboard_driver/hoverboard.h	/^    ros::Publisher left_eff_pub, right_eff_pub;$/;"	m	class:Hoverboard
+left_pos_pub	include/hoverboard_driver/hoverboard.h	/^    ros::Publisher left_pos_pub, right_pos_pub;$/;"	m	class:Hoverboard
+left_vel_pub	include/hoverboard_driver/hoverboard.h	/^    ros::Publisher left_vel_pub, right_vel_pub;$/;"	m	class:Hoverboard
+len	src/bipropellant/src/hbprotocol/examples/nodered/snippets.js	/^var len = 2;$/;"	v
+len	src/bipropellant/src/hbprotocol/examples/nodered/snippets.js	/^var len = msg.payload.length;$/;"	v
+len	src/bipropellant/src/hbprotocol/protocol.c	/^    unsigned char len;    \/\/ overall length of THIS$/;"	m	struct:tag_description	file:
+len	src/bipropellant/src/hbprotocol/protocol.h	/^    int len;                \/\/ length of value$/;"	m	struct:tag_PARAMSTAT
+len	src/bipropellant/src/hbprotocol/protocol.h	/^    unsigned char len; \/\/ len is len of bytes to follow, NOT including CS$/;"	m	struct:tag_PROTOCOL_MSG2
+len	src/bipropellant/src/hbprotocol/protocol_private.h	/^    unsigned char len; \/\/ len is len of ALL bytes to follow, including CS$/;"	m	struct:tag_PROTOCOL_LEN_ONWARDS
+limiter_count	src/bipropellant/src/hbprotocol/protocol.h	/^        unsigned int limiter_count;$/;"	m	struct:tag_PROTOCOL_MOTOR_ELECTRICAL
+line_functions	src/bipropellant/src/hbprotocol/ascii_protocol.c	/^static ASCII_FUNCTION line_functions[256];$/;"	v	file:
+line_help	src/bipropellant/src/hbprotocol/ascii_protocol.c	/^static int line_help(PROTOCOL_STAT *s, char *cmd, char *ascii_out) {$/;"	f	file:
+line_lock_ascii	src/bipropellant/src/hbprotocol/ascii_protocol.c	/^static int line_lock_ascii(PROTOCOL_STAT *s, char *cmd, char *ascii_out) {$/;"	f	file:
+line_unlock_ascii	src/bipropellant/src/hbprotocol/ascii_protocol.c	/^static int line_unlock_ascii(PROTOCOL_STAT *s, char *cmd, char *ascii_out) {$/;"	f	file:
+main	src/main.cpp	/^int main(int argc, char **argv) {$/;"	f
+millis	src/bipropellant/src/HoverboardAPI.cpp	/^unsigned long millis() { $/;"	f
+motors	src/bipropellant/src/hbprotocol/protocol.h	/^    PROTOCOL_MOTOR_ELECTRICAL motors[2];$/;"	m	struct:tag_PROTOCOL_ELECTRICAL_PARAMS
+mpGetTxByte	src/bipropellant/src/hbprotocol/machine_protocol.c	/^unsigned char mpGetTxByte(MACHINE_PROTOCOL_TX_BUFFER *buf){$/;"	f
+mpGetTxMsg	src/bipropellant/src/hbprotocol/machine_protocol.c	/^char mpGetTxMsg(MACHINE_PROTOCOL_TX_BUFFER *buf, unsigned char *dest){$/;"	f
+mpPutTx	src/bipropellant/src/hbprotocol/machine_protocol.c	/^void mpPutTx(MACHINE_PROTOCOL_TX_BUFFER *buf, unsigned char value){$/;"	f
+mpTxQueued	src/bipropellant/src/hbprotocol/machine_protocol.c	/^int mpTxQueued(MACHINE_PROTOCOL_TX_BUFFER *buf){$/;"	f
+next_send_time	src/bipropellant/src/hbprotocol/protocol.h	/^    unsigned long next_send_time;    \/\/ last time a message requiring an ACK was sent$/;"	m	struct:tag_PROTOCOL_SUBSCRIBEDATA
+nh	include/hoverboard_driver/hoverboard.h	/^    ros::NodeHandle nh;$/;"	m	class:Hoverboard
+noDelay	src/bipropellant/src/hbprotocol/protocol.c	/^void noDelay(uint32_t Delay) {};$/;"	f
+noReset	src/bipropellant/src/hbprotocol/protocol.c	/^void noReset(void) {};$/;"	f
+noTick	src/bipropellant/src/hbprotocol/protocol.c	/^uint32_t noTick(void) { return 0; };$/;"	f
+noack	src/bipropellant/src/hbprotocol/protocol.h	/^    PROTOCOLSTATE noack;$/;"	m	struct:tag_PROTOCOL_STAT
+nosend	src/bipropellant/src/hbprotocol/protocol.c	/^int nosend( unsigned char *data, int len ){ return 0; };$/;"	f
+out	src/bipropellant/src/hbprotocol/examples/nodered/snippets.js	/^var out = '';$/;"	v
+overflow	src/bipropellant/src/hbprotocol/protocol.h	/^    volatile unsigned int overflow;$/;"	m	struct:tag_MACHINE_PROTOCOL_TX_BUFFER
+params	src/bipropellant/src/hbprotocol/protocol.c	/^PARAMSTAT *params[256];$/;"	v
+paramstat_descriptions	src/bipropellant/src/hbprotocol/protocol.c	/^DESCRIPTIONS paramstat_descriptions;$/;"	v
+password	src/bipropellant/src/hbprotocol/ascii_protocol.c	/^static char password[] = "unlockASCII";   \/\/ unlock password, has to start with an 'u'$/;"	v	file:
+period	src/bipropellant/src/hbprotocol/protocol.h	/^    unsigned int period;             \/\/ how often should the information be sent?$/;"	m	struct:tag_PROTOCOL_SUBSCRIBEDATA
+port_fd	src/hoverboard.cpp	/^int port_fd = -1;$/;"	v
+pos	include/hoverboard_driver/hoverboard.h	/^        std_msgs::Float64 pos;$/;"	m	struct:Hoverboard::Joint
+posn_diff_mm	src/bipropellant/src/hbprotocol/protocol.h	/^    long posn_diff_mm[2];$/;"	m	struct:tag_PROTOCOL_POSN_DATA
+posn_max_speed	src/bipropellant/src/hbprotocol/protocol.h	/^    int posn_max_speed; \/\/ max speed in this mode$/;"	m	struct:tag_PROTOCOL_POSN_DATA
+posn_min_speed	src/bipropellant/src/hbprotocol/protocol.h	/^    int posn_min_speed; \/\/ minimum speed (to get wheels moving)$/;"	m	struct:tag_PROTOCOL_POSN_DATA
+posn_speed_demand	src/bipropellant/src/hbprotocol/protocol.h	/^    long posn_speed_demand[2];$/;"	m	struct:tag_PROTOCOL_POSN_DATA
+printStats	src/bipropellant/src/HoverboardAPI.cpp	/^void HoverboardAPI::printStats() {$/;"	f	class:HoverboardAPI
+protocolCountACK	src/bipropellant/src/HoverboardAPI.h	/^  protocolCountACK         = 0x23,$/;"	e	enum:HoverboardAPI::Codes
+protocolCountSum	src/bipropellant/src/HoverboardAPI.h	/^  protocolCountSum         = 0x23,$/;"	e	enum:HoverboardAPI::Codes
+protocolCountnoACK	src/bipropellant/src/HoverboardAPI.h	/^  protocolCountnoACK       = 0x23,$/;"	e	enum:HoverboardAPI::Codes
+protocolPush	src/bipropellant/src/HoverboardAPI.cpp	/^void HoverboardAPI::protocolPush(unsigned char byte) {$/;"	f	class:HoverboardAPI
+protocolSubscriptions	src/bipropellant/src/HoverboardAPI.h	/^  protocolSubscriptions    = 0x22,$/;"	e	enum:HoverboardAPI::Codes
+protocolTick	src/bipropellant/src/HoverboardAPI.cpp	/^void HoverboardAPI::protocolTick() {$/;"	f	class:HoverboardAPI
+protocolVersion	src/bipropellant/src/HoverboardAPI.h	/^  protocolVersion          = 0x00,$/;"	e	enum:HoverboardAPI::Codes
+protocol_Delay	src/bipropellant/src/hbprotocol/protocol.c	/^void (*protocol_Delay)(uint32_t Delay) = noDelay;$/;"	v
+protocol_GetTick	src/bipropellant/src/hbprotocol/protocol.c	/^uint32_t (*protocol_GetTick)() = noTick;$/;"	v
+protocol_SystemReset	src/bipropellant/src/hbprotocol/protocol.c	/^void (*protocol_SystemReset)() = noReset;$/;"	v
+protocol_byte	src/bipropellant/src/hbprotocol/examples/nodered/snippets.js	/^var protocol_byte = function( byte ){$/;"	f
+protocol_byte	src/bipropellant/src/hbprotocol/machine_protocol.c	/^void protocol_byte(PROTOCOL_STAT *s, unsigned char byte ){$/;"	f
+protocol_init	src/bipropellant/src/hbprotocol/protocol.c	/^int protocol_init(PROTOCOL_STAT *s) {$/;"	f
+protocol_post	src/bipropellant/src/hbprotocol/machine_protocol.c	/^int protocol_post(PROTOCOL_STAT *s, PROTOCOL_MSG2 *msg){$/;"	f
+protocol_process_message	src/bipropellant/src/hbprotocol/protocol.c	/^void protocol_process_message(PROTOCOL_STAT *s, PROTOCOL_MSG2 *msg) {$/;"	f
+protocol_send	src/bipropellant/src/hbprotocol/machine_protocol.c	/^int protocol_send(PROTOCOL_STAT *s, PROTOCOL_MSG2 *msg){$/;"	f
+protocol_send_ack	src/bipropellant/src/hbprotocol/machine_protocol.c	/^void protocol_send_ack(int (*send_serial_data)( unsigned char *data, int len ), unsigned char CI){$/;"	f
+protocol_send_nack	src/bipropellant/src/hbprotocol/machine_protocol.c	/^void protocol_send_nack(int (*send_serial_data)( unsigned char *data, int len ), unsigned char CI, unsigned char som){$/;"	f
+protocol_send_raw	src/bipropellant/src/hbprotocol/machine_protocol.c	/^void protocol_send_raw(int (*send_serial_data)( unsigned char *data, int len ), PROTOCOL_MSG2 *msg){$/;"	f
+protocol_tick	src/bipropellant/src/hbprotocol/machine_protocol.c	/^void protocol_tick(PROTOCOL_STAT *s){$/;"	f
+ptr	src/bipropellant/src/hbprotocol/protocol.h	/^    void *ptr;              \/\/ pointer to value$/;"	m	struct:tag_PARAMSTAT
+pwm	src/bipropellant/src/hbprotocol/protocol.h	/^    long pwm[2];$/;"	m	struct:tag_PROTOCOL_PWM_DATA
+pwm_actual	src/bipropellant/src/hbprotocol/protocol.h	/^        int pwm_actual;$/;"	m	struct:tag_PROTOCOL_MOTOR_ELECTRICAL
+pwm_limiter	src/bipropellant/src/hbprotocol/protocol.h	/^        int pwm_limiter;$/;"	m	struct:tag_PROTOCOL_MOTOR_ELECTRICAL
+pwm_requested	src/bipropellant/src/hbprotocol/protocol.h	/^        int pwm_requested;$/;"	m	struct:tag_PROTOCOL_MOTOR_ELECTRICAL
+q	src/bipropellant/src/hbprotocol/protocol.h	/^        int q;$/;"	m	struct:tag_PROTOCOL_MOTOR_ELECTRICAL
+r1	src/bipropellant/src/hbprotocol/protocol.h	/^        int r1;$/;"	m	struct:tag_PROTOCOL_MOTOR_ELECTRICAL
+r2	src/bipropellant/src/hbprotocol/protocol.h	/^        int r2;$/;"	m	struct:tag_PROTOCOL_MOTOR_ELECTRICAL
+read	src/hoverboard.cpp	/^void Hoverboard::read() {$/;"	f	class:Hoverboard
+readCallback	src/hoverboard.cpp	/^void readCallback(PROTOCOL_STAT* s, PARAMSTAT* param, uint8_t fn_type, unsigned char* content, int len) {$/;"	f
+reconfigure_callback	src/hoverboard.cpp	/^void Hoverboard::reconfigure_callback(hoverboard_driver::HoverboardConfig& _config, uint32_t level) {$/;"	f	class:Hoverboard
+requestRead	src/bipropellant/src/HoverboardAPI.cpp	/^void HoverboardAPI::requestRead(Codes code, char som) {$/;"	f	class:HoverboardAPI
+resetCounters	src/bipropellant/src/HoverboardAPI.cpp	/^void HoverboardAPI::resetCounters() {$/;"	f	class:HoverboardAPI
+retries	src/bipropellant/src/hbprotocol/protocol.h	/^    char retries;                            \/\/ number of retries left to send message$/;"	m	struct:tag_PROTOCOLSTATE
+right_cmd_pub	include/hoverboard_driver/hoverboard.h	/^    ros::Publisher left_cmd_pub, right_cmd_pub;$/;"	m	class:Hoverboard
+right_cur_pub	include/hoverboard_driver/hoverboard.h	/^    ros::Publisher left_cur_pub, right_cur_pub;$/;"	m	class:Hoverboard
+right_eff_pub	include/hoverboard_driver/hoverboard.h	/^    ros::Publisher left_eff_pub, right_eff_pub;$/;"	m	class:Hoverboard
+right_pos_pub	include/hoverboard_driver/hoverboard.h	/^    ros::Publisher left_pos_pub, right_pos_pub;$/;"	m	class:Hoverboard
+right_vel_pub	include/hoverboard_driver/hoverboard.h	/^    ros::Publisher left_vel_pub, right_vel_pub;$/;"	m	class:Hoverboard
+rw	src/bipropellant/src/hbprotocol/protocol.h	/^    char rw;                \/\/ PARAM_R or PARAM_RW$/;"	m	struct:tag_PARAMSTAT
+rx	src/bipropellant/src/hbprotocol/protocol.h	/^    unsigned long rx;              \/\/ Count of received messages (valid CS)$/;"	m	struct:tag_PROTOCOLCOUNT
+rxMissing	src/bipropellant/src/hbprotocol/protocol.h	/^    unsigned long rxMissing;       \/\/ If message IDs went missing..$/;"	m	struct:tag_PROTOCOLCOUNT
+s	src/bipropellant/src/HoverboardAPI.h	/^    PROTOCOL_STAT s;$/;"	m	class:HoverboardAPI
+scheduleRead	src/bipropellant/src/HoverboardAPI.cpp	/^void HoverboardAPI::scheduleRead(Codes code, int count, unsigned int period, char som) {$/;"	f	class:HoverboardAPI
+scheduleTransmission	src/bipropellant/src/HoverboardAPI.cpp	/^void HoverboardAPI::scheduleTransmission(Codes code, int count, unsigned int period, char som) {$/;"	f	class:HoverboardAPI
+sendBuzzer	src/bipropellant/src/HoverboardAPI.cpp	/^void HoverboardAPI::sendBuzzer(uint8_t buzzerFreq, uint8_t buzzerPattern, uint16_t buzzerLen, char som) {$/;"	f	class:HoverboardAPI
+sendCounterReset	src/bipropellant/src/HoverboardAPI.cpp	/^void HoverboardAPI::sendCounterReset(char som) {$/;"	f	class:HoverboardAPI
+sendDifferentialPWM	src/bipropellant/src/HoverboardAPI.cpp	/^void HoverboardAPI::sendDifferentialPWM(int16_t left_cmd, int16_t right_cmd, char som) {$/;"	f	class:HoverboardAPI
+sendEnable	src/bipropellant/src/HoverboardAPI.cpp	/^void HoverboardAPI::sendEnable(uint8_t newEnable, char som) {$/;"	f	class:HoverboardAPI
+sendPIDControl	src/bipropellant/src/HoverboardAPI.cpp	/^void HoverboardAPI::sendPIDControl(int16_t Kp, int16_t Ki, int16_t Kd, int16_t speed_increment, char som) {$/;"	f	class:HoverboardAPI
+sendPWM	src/bipropellant/src/HoverboardAPI.cpp	/^void HoverboardAPI::sendPWM(int16_t pwm, int16_t steer, char som) {$/;"	f	class:HoverboardAPI
+sendPWMData	src/bipropellant/src/HoverboardAPI.cpp	/^void HoverboardAPI::sendPWMData(int16_t pwm, int16_t steer, int speed_max_power, int speed_min_power, int speed_minimum_pwm, char som) {$/;"	f	class:HoverboardAPI
+sendSpeedData	src/bipropellant/src/HoverboardAPI.cpp	/^void HoverboardAPI::sendSpeedData(double left_speed, double right_speed, int16_t max_power, int16_t min_speed, char som) {$/;"	f	class:HoverboardAPI
+send_ack	src/bipropellant/src/hbprotocol/examples/nodered/snippets.js	/^var send_ack = function(CI) {$/;"	f
+send_serial_data	src/bipropellant/src/hbprotocol/protocol.h	/^    int (*send_serial_data)( unsigned char *data, int len );       \/\/ Function Pointer to sending function$/;"	m	struct:tag_PROTOCOL_STAT
+send_serial_data_wait	src/bipropellant/src/hbprotocol/protocol.h	/^    int (*send_serial_data_wait)( unsigned char *data, int len );$/;"	m	struct:tag_PROTOCOL_STAT
+send_state	src/bipropellant/src/hbprotocol/protocol.h	/^    char send_state;                      \/\/ message transmission state (ACK_TX_WAITING or IDLE)$/;"	m	struct:tag_PROTOCOL_STAT
+sensElectrical	src/bipropellant/src/HoverboardAPI.h	/^  sensElectrical           = 0x08,$/;"	e	enum:HoverboardAPI::Codes
+sensHall	src/bipropellant/src/HoverboardAPI.h	/^  sensHall                 = 0x02,$/;"	e	enum:HoverboardAPI::Codes
+sensordata	src/bipropellant/src/hbprotocol/examples/nodered/snippets.js	/^                out = {$/;"	p	class:case.charCodeAt
+serialWrite	src/hoverboard.cpp	/^int serialWrite(unsigned char *data, int len) {$/;"	f
+setBuzzer	src/bipropellant/src/HoverboardAPI.h	/^  setBuzzer                = 0x21,$/;"	e	enum:HoverboardAPI::Codes
+setParam	src/bipropellant/src/hbprotocol/protocol.c	/^int setParam(PARAMSTAT *param) {$/;"	f
+setParamHandler	src/bipropellant/src/hbprotocol/protocol.c	/^int setParamHandler(unsigned char code, PARAMSTAT_FN callback) {$/;"	f
+setParamVariable	src/bipropellant/src/hbprotocol/protocol.c	/^int setParamVariable(unsigned char code, char ui_type, void *ptr, int len, char rw) {$/;"	f
+setParams	src/bipropellant/src/hbprotocol/protocol.c	/^int setParams( PARAMSTAT params[], int len) {$/;"	f
+setPointPWM	src/bipropellant/src/HoverboardAPI.h	/^  setPointPWM              = 0x0E,$/;"	e	enum:HoverboardAPI::Codes
+setPointPWMData	src/bipropellant/src/HoverboardAPI.h	/^  setPointPWMData          = 0x0D,$/;"	e	enum:HoverboardAPI::Codes
+setSpeed	src/bipropellant/src/HoverboardAPI.h	/^  setSpeed                 = 0x03,$/;"	e	enum:HoverboardAPI::Codes
+setSpeedIncrLimit	src/bipropellant/src/HoverboardAPI.h	/^  setSpeedIncrLimit        = 0x88$/;"	e	enum:HoverboardAPI::Codes
+setSpeedKd	src/bipropellant/src/HoverboardAPI.h	/^  setSpeedKd               = 0x87,$/;"	e	enum:HoverboardAPI::Codes
+setSpeedKi	src/bipropellant/src/HoverboardAPI.h	/^  setSpeedKi               = 0x86,$/;"	e	enum:HoverboardAPI::Codes
+setSpeedKp	src/bipropellant/src/HoverboardAPI.h	/^  setSpeedKp               = 0x85,$/;"	e	enum:HoverboardAPI::Codes
+setup_git	src/bipropellant/scripts/update_arduino_branch.sh	/^setup_git() {$/;"	f
+setup_protocol	src/bipropellant/src/protocolFunctions.c	/^int setup_protocol() {$/;"	f
+som	src/bipropellant/src/hbprotocol/protocol.h	/^    char som;                        \/\/ which SOM shall be used? with or without ACK$/;"	m	struct:tag_PROTOCOL_SUBSCRIBEDATA
+speed_diff_mm_per_sec	src/bipropellant/src/hbprotocol/protocol.h	/^    long speed_diff_mm_per_sec[2];$/;"	m	struct:tag_PROTOCOL_SPEED_DATA
+speed_max_power	src/bipropellant/src/hbprotocol/protocol.h	/^    int speed_max_power; \/\/ max speed in this mode$/;"	m	struct:tag_PROTOCOL_PWM_DATA
+speed_max_power	src/bipropellant/src/hbprotocol/protocol.h	/^    int speed_max_power; \/\/ max speed in this mode$/;"	m	struct:tag_PROTOCOL_SPEED_DATA
+speed_min_power	src/bipropellant/src/hbprotocol/protocol.h	/^    int speed_min_power; \/\/ minimum speed (to get wheels moving)$/;"	m	struct:tag_PROTOCOL_PWM_DATA
+speed_min_power	src/bipropellant/src/hbprotocol/protocol.h	/^    int speed_min_power; \/\/ minimum speed (to get wheels moving)$/;"	m	struct:tag_PROTOCOL_SPEED_DATA
+speed_minimum_pwm	src/bipropellant/src/hbprotocol/protocol.h	/^    int speed_minimum_pwm; \/\/ below this, we don't ask it to do anything$/;"	m	struct:tag_PROTOCOL_PWM_DATA
+speed_minimum_speed	src/bipropellant/src/hbprotocol/protocol.h	/^    int speed_minimum_speed; \/\/ below this, we don't ask it to do anything$/;"	m	struct:tag_PROTOCOL_SPEED_DATA
+speed_power_demand	src/bipropellant/src/hbprotocol/protocol.h	/^    long speed_power_demand[2];$/;"	m	struct:tag_PROTOCOL_SPEED_DATA
+state	src/bipropellant/src/hbprotocol/protocol.h	/^    char state;                           \/\/ state used in protocol_byte to receive messages$/;"	m	struct:tag_PROTOCOL_STAT
+states	src/bipropellant/src/hbprotocol/examples/nodered/snippets.js	/^var states = {$/;"	v
+subscriptions	src/bipropellant/src/hbprotocol/protocol.h	/^    PROTOCOL_SUBSCRIBEDATA subscriptions[10];      \/\/ Subscriptions to periodic messages$/;"	m	struct:tag_PROTOCOL_STAT
+tag_MACHINE_PROTOCOL_TX_BUFFER	src/bipropellant/src/hbprotocol/protocol.h	/^typedef struct tag_MACHINE_PROTOCOL_TX_BUFFER {$/;"	s
+tag_PARAMSTAT	src/bipropellant/src/hbprotocol/protocol.h	/^struct tag_PARAMSTAT {$/;"	s
+tag_PROTOCOLCOUNT	src/bipropellant/src/hbprotocol/protocol.h	/^typedef struct tag_PROTOCOLCOUNT {$/;"	s
+tag_PROTOCOLSTATE	src/bipropellant/src/hbprotocol/protocol.h	/^typedef struct tag_PROTOCOLSTATE {$/;"	s
+tag_PROTOCOL_BYTES	src/bipropellant/src/hbprotocol/protocol_private.h	/^typedef struct tag_PROTOCOL_BYTES {$/;"	s
+tag_PROTOCOL_BYTES_READVALS	src/bipropellant/src/hbprotocol/protocol_private.h	/^typedef struct tag_PROTOCOL_BYTES_READVALS {$/;"	s
+tag_PROTOCOL_BYTES_WRITEVALS	src/bipropellant/src/hbprotocol/protocol_private.h	/^typedef struct tag_PROTOCOL_BYTES_WRITEVALS {$/;"	s
+tag_PROTOCOL_ELECTRICAL_PARAMS	src/bipropellant/src/hbprotocol/protocol.h	/^typedef struct tag_PROTOCOL_ELECTRICAL_PARAMS{$/;"	s
+tag_PROTOCOL_HALL_DATA_STRUCT	src/bipropellant/src/hbprotocol/protocol.h	/^typedef struct tag_PROTOCOL_HALL_DATA_STRUCT{$/;"	s
+tag_PROTOCOL_LEN_ONWARDS	src/bipropellant/src/hbprotocol/protocol_private.h	/^typedef struct tag_PROTOCOL_LEN_ONWARDS {$/;"	s
+tag_PROTOCOL_MOTOR_ELECTRICAL	src/bipropellant/src/hbprotocol/protocol.h	/^typedef struct tag_PROTOCOL_MOTOR_ELECTRICAL{$/;"	s
+tag_PROTOCOL_MSG2	src/bipropellant/src/hbprotocol/protocol.h	/^typedef struct tag_PROTOCOL_MSG2 {$/;"	s
+tag_PROTOCOL_POSN	src/bipropellant/src/hbprotocol/protocol.h	/^typedef struct tag_PROTOCOL_POSN {$/;"	s
+tag_PROTOCOL_POSN_DATA	src/bipropellant/src/hbprotocol/protocol.h	/^typedef struct tag_PROTOCOL_POSN_DATA {$/;"	s
+tag_PROTOCOL_POSN_INCR	src/bipropellant/src/hbprotocol/protocol.h	/^typedef struct tag_PROTOCOL_POSN_INCR {$/;"	s
+tag_PROTOCOL_PWM_DATA	src/bipropellant/src/hbprotocol/protocol.h	/^typedef struct tag_PROTOCOL_PWM_DATA {$/;"	s
+tag_PROTOCOL_SPEED_DATA	src/bipropellant/src/hbprotocol/protocol.h	/^typedef struct tag_PROTOCOL_SPEED_DATA {$/;"	s
+tag_PROTOCOL_STAT	src/bipropellant/src/hbprotocol/protocol.h	/^typedef struct tag_PROTOCOL_STAT {$/;"	s
+tag_PROTOCOL_SUBSCRIBEDATA	src/bipropellant/src/hbprotocol/protocol.h	/^typedef struct tag_PROTOCOL_SUBSCRIBEDATA {$/;"	s
+tag_PROTOCOL_sensor_frame	src/bipropellant/src/hbprotocol/protocol.h	/^typedef struct tag_PROTOCOL_sensor_frame{$/;"	s
+tag_description	src/bipropellant/src/hbprotocol/protocol.c	/^typedef struct tag_description {$/;"	s	file:
+tag_descriptions	src/bipropellant/src/hbprotocol/protocol.c	/^typedef struct tag_descriptions {$/;"	s	file:
+tail	src/bipropellant/src/hbprotocol/protocol.h	/^    volatile int tail;$/;"	m	struct:tag_MACHINE_PROTOCOL_TX_BUFFER
+test	src/bipropellant/src/hbprotocol/examples/nodered/snippets.js	/^        out = {test:'test return len'+msg.payload.length};$/;"	p	class:case.charCodeAt
+tick	src/hoverboard.cpp	/^void Hoverboard::tick() {$/;"	f	class:Hoverboard
+tickWrapper	src/bipropellant/src/HoverboardAPI.cpp	/^uint32_t tickWrapper(void) { return (uint32_t) millis(); }$/;"	f
+timeout1	src/bipropellant/src/hbprotocol/protocol.h	/^    int timeout1;                         \/\/ ACK has to be received in this time$/;"	m	struct:tag_PROTOCOL_STAT
+timeout2	src/bipropellant/src/hbprotocol/protocol.h	/^    int timeout2;                         \/\/ when receiving a packet, longest time between characters$/;"	m	struct:tag_PROTOCOL_STAT
+ts_start	src/bipropellant/src/HoverboardAPI.cpp	/^static uint64_t ts_start = 0;$/;"	v	file:
+tx	src/bipropellant/src/hbprotocol/protocol.h	/^    unsigned long tx;              \/\/ Count of sent messages (ACK, NACK and retries do not count)$/;"	m	struct:tag_PROTOCOLCOUNT
+txFailed	src/bipropellant/src/hbprotocol/protocol.h	/^    unsigned int  txFailed;        \/\/ TX Messages which couldn't be deliveredr. No retries left.$/;"	m	struct:tag_PROTOCOLCOUNT
+txRetries	src/bipropellant/src/hbprotocol/protocol.h	/^    unsigned int  txRetries;       \/\/ how often were messages resend?$/;"	m	struct:tag_PROTOCOLCOUNT
+ui_type	src/bipropellant/src/hbprotocol/protocol.h	/^    char ui_type;           \/\/ only UI_NONE or UI_SHORT$/;"	m	struct:tag_PARAMSTAT
+uistr	src/bipropellant/src/hbprotocol/protocol.h	/^    char *uistr;            \/\/ if non-null, used in ascii protocol to adjust with f<str>num<cr>$/;"	m	struct:tag_PARAMSTAT
+unknowncommands	src/bipropellant/src/hbprotocol/protocol.h	/^    unsigned int  unknowncommands;           \/\/ count of messages with unknown commands$/;"	m	struct:tag_PROTOCOLCOUNT
+unplausibleresponse	src/bipropellant/src/hbprotocol/protocol.h	/^    unsigned int  unplausibleresponse;       \/\/ count of unplausible replies$/;"	m	struct:tag_PROTOCOLCOUNT
+unwantedacks	src/bipropellant/src/hbprotocol/protocol.h	/^    unsigned int  unwantedacks;              \/\/ count of unwated ACK messages$/;"	m	struct:tag_PROTOCOLCOUNT
+unwantednacks	src/bipropellant/src/hbprotocol/protocol.h	/^    unsigned int  unwantednacks;             \/\/ count of unwanted NACK messges$/;"	m	struct:tag_PROTOCOLCOUNT
+updateParamHandler	src/bipropellant/src/HoverboardAPI.cpp	/^PARAMSTAT_FN HoverboardAPI::updateParamHandler(Codes code, PARAMSTAT_FN callback) {$/;"	f	class:HoverboardAPI
+updateParamVariable	src/bipropellant/src/HoverboardAPI.cpp	/^int HoverboardAPI::updateParamVariable(Codes code, void *ptr, int len) {$/;"	f	class:HoverboardAPI
+upload_files	src/bipropellant/scripts/update_arduino_branch.sh	/^upload_files() {$/;"	f
+var_len	src/bipropellant/src/hbprotocol/protocol.c	/^    unsigned char var_len;\/\/ length of variable referenced$/;"	m	struct:tag_description	file:
+var_type	src/bipropellant/src/hbprotocol/protocol.c	/^    unsigned char var_type;\/\/ UI_NONE or UI_SHORT for the moment$/;"	m	struct:tag_description	file:
+vel	include/hoverboard_driver/hoverboard.h	/^        std_msgs::Float64 vel;$/;"	m	struct:Hoverboard::Joint
+velocity_joint_interface	include/hoverboard_driver/hoverboard.h	/^    hardware_interface::VelocityJointInterface velocity_joint_interface;$/;"	m	class:Hoverboard
+version	src/bipropellant/src/hbprotocol/protocol.c	/^static int version = 1;$/;"	v	file:
+voltage_pub	include/hoverboard_driver/hoverboard.h	/^    ros::Publisher voltage_pub;$/;"	m	class:Hoverboard
+wanted_posn_mm	src/bipropellant/src/hbprotocol/protocol.h	/^    long wanted_posn_mm[2];$/;"	m	struct:tag_PROTOCOL_POSN_DATA
+wanted_speed_mm_per_sec	src/bipropellant/src/hbprotocol/protocol.h	/^    long wanted_speed_mm_per_sec[2];$/;"	m	struct:tag_PROTOCOL_SPEED_DATA
+wheel_radius	include/hoverboard_driver/hoverboard.h	/^    double wheel_radius;$/;"	m	class:Hoverboard
+write	src/hoverboard.cpp	/^void Hoverboard::write() {$/;"	f	class:Hoverboard
+x	src/bipropellant/src/hbprotocol/protocol.h	/^    long x;$/;"	m	struct:PROTOCOL_INTEGER_XYT_POSN_tag
+y	src/bipropellant/src/hbprotocol/protocol.h	/^    long y;$/;"	m	struct:PROTOCOL_INTEGER_XYT_POSN_tag
+~Hoverboard	src/hoverboard.cpp	/^Hoverboard::~Hoverboard() {$/;"	f	class:Hoverboard
