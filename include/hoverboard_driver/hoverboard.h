@@ -35,7 +35,7 @@ public:
         std_msgs::Float64 cmd;
     } joints[2];
 
-    double wheel_radius;
+    float _wheel_radius;
     ros::Time last_read;
     HoverboardAPI *api;
 

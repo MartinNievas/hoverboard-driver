@@ -61,15 +61,15 @@ Hoverboard::Hoverboard() {
     left_cur_pub  = nh.advertise<std_msgs::Float64>("hoverboard/left_wheel/current", 3);
     right_cur_pub = nh.advertise<std_msgs::Float64>("hoverboard/right_wheel/current", 3);
     voltage_pub   = nh.advertise<std_msgs::Float64>("hoverboard/battery_voltage", 3);
-    
-    // FIXME! Read parameters from ROS
-    wheel_radius = WHEEL_RADIUS;
+
+    ros::param::get("/robot/wheel_radius", _wheel_radius);
+    ROS_INFO("wheel radius: %f", _wheel_radius);
 
     if ((port_fd = open(PORT, O_RDWR | O_NOCTTY | O_NDELAY)) < 0) {
         ROS_FATAL("Cannot open serial port to hoverboard");
         exit(-1);
     }
-    
+
     // CONFIGURE THE UART -- connecting to the board
     // The flags (defined in /usr/include/termios.h - see http://pubs.opengroup.org/onlinepubs/007908799/xsh/termios.h.html):
     struct termios options;
@@ -180,8 +180,8 @@ void Hoverboard::write() {
 #else 
     // Cap according to dynamic_reconfigure
     // Convert rad/s to m/s
-    double left_speed = DIRECTION_CORRECTION * joints[0].cmd.data * wheel_radius;
-    double right_speed = DIRECTION_CORRECTION * joints[1].cmd.data * wheel_radius;
+    double left_speed = DIRECTION_CORRECTION * joints[0].cmd.data * _wheel_radius;
+    double right_speed = DIRECTION_CORRECTION * joints[1].cmd.data * _wheel_radius;
     const int max_power = have_config ? config.MaxPwr : 100;    
     const int min_speed = have_config ? config.MinSpd : 40;
     api->sendSpeedData (left_speed, right_speed, max_power, min_speed);
