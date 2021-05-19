@@ -65,7 +65,10 @@ Hoverboard::Hoverboard() {
     ros::param::get("/robot/wheel_radius", _wheel_radius);
     ROS_INFO("wheel radius: %f", _wheel_radius);
 
-    if ((port_fd = open(PORT, O_RDWR | O_NOCTTY | O_NDELAY)) < 0) {
+    ros::param::get("/robot/serial_port", _serial_port);
+    ROS_INFO("serial port: %s", _serial_port.c_str());
+
+    if ((port_fd = open(_serial_port.c_str(), O_RDWR | O_NOCTTY | O_NDELAY)) < 0) {
         ROS_FATAL("Cannot open serial port to hoverboard");
         exit(-1);
     }
@@ -124,11 +127,11 @@ void Hoverboard::read() {
       last_read = ros::Time::now();
 
     if (r < 0 && errno != EAGAIN)
-      ROS_ERROR("Reading from serial %s failed: %d", PORT, r);
+      ROS_ERROR("Reading from serial %s failed: %d", _serial_port.c_str(), r);
   }
 
   if ((ros::Time::now() - last_read).toSec() > 1) {
-    ROS_FATAL("Timeout reading from serial %s failed", PORT);
+    ROS_FATAL("Timeout reading from serial %s failed", _serial_port.c_str());
   }
 }
 
