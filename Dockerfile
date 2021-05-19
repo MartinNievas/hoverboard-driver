@@ -13,11 +13,11 @@ RUN apt update && \
 RUN echo "source /opt/ros/melodic/setup.bash" >> /.bashrc
 
 # Copy files inside docker image
-# COPY . ./src/hoverboard-driver
+COPY . ./src/hoverboard-driver
 
 # Init workspace
-# RUN /bin/bash -c '. /opt/ros/melodic/setup.bash; catkin_init_workspace /home/catkin_ws/src'
+RUN /bin/bash -c '. /opt/ros/melodic/setup.bash; catkin_init_workspace /home/catkin_ws/src'
 
-# Make package
-# RUN /bin/bash -c '. /opt/ros/melodic/setup.bash; cd /home/catkin_ws; catkin_make'
+# Make package at start
+ENTRYPOINT /bin/bash -c '. /opt/ros/melodic/setup.bash; cd /home/catkin_ws; catkin_make; . /home/catkin_ws/devel/setup.bash; roslaunch hoverboard_driver hoverboard.launch'
 
