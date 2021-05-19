@@ -14,7 +14,7 @@ class Hoverboard : public hardware_interface::RobotHW {
 public:
     static Hoverboard& getInstance();
     ~Hoverboard();
-    
+
     void read();
     void write();
     void tick();
@@ -23,7 +23,7 @@ public:
     void electricalCallback();
  private:
     Hoverboard();
- 
+
     hardware_interface::JointStateInterface joint_state_interface;
     hardware_interface::VelocityJointInterface velocity_joint_interface;
 
@@ -35,7 +35,8 @@ public:
         std_msgs::Float64 cmd;
     } joints[2];
 
-    double wheel_radius;
+    float _wheel_radius;
+    std::string _serial_port;
     ros::Time last_read;
     HoverboardAPI *api;
 

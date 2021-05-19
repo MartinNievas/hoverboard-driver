@@ -1,3 +1,4 @@
+<?xml version="1.0"?>
 <launch>
     <rosparam file="$(find hoverboard_driver)/config/hardware.yaml" command="load"/>
     <rosparam file="$(find hoverboard_driver)/config/controllers.yaml" command="load"/>

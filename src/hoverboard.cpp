@@ -29,25 +29,25 @@ Hoverboard& Hoverboard::getInstance() {
 }
 
 Hoverboard::Hoverboard() {
-    hardware_interface::JointStateHandle left_wheel_state_handle("left_wheel",
-								 &joints[0].pos.data,
-								 &joints[0].vel.data,
-								 &joints[0].eff.data);
-    hardware_interface::JointStateHandle right_wheel_state_handle("right_wheel",
-								  &joints[1].pos.data,
-								  &joints[1].vel.data,
-								  &joints[1].eff.data);
-    joint_state_interface.registerHandle (left_wheel_state_handle);
-    joint_state_interface.registerHandle (right_wheel_state_handle);
-    registerInterface(&joint_state_interface);
+  hardware_interface::JointStateHandle left_wheel_state_handle("left_wheel",
+      &joints[0].pos.data,
+      &joints[0].vel.data,
+      &joints[0].eff.data);
+  hardware_interface::JointStateHandle right_wheel_state_handle("right_wheel",
+      &joints[1].pos.data,
+      &joints[1].vel.data,
+      &joints[1].eff.data);
+  joint_state_interface.registerHandle (left_wheel_state_handle);
+  joint_state_interface.registerHandle (right_wheel_state_handle);
+  registerInterface(&joint_state_interface);
 
-    hardware_interface::JointHandle left_wheel_vel_handle(joint_state_interface.getHandle("left_wheel"),
-							  &joints[0].cmd.data);
-    hardware_interface::JointHandle right_wheel_vel_handle(joint_state_interface.getHandle("right_wheel"),
-							   &joints[1].cmd.data);
-    velocity_joint_interface.registerHandle (left_wheel_vel_handle);
-    velocity_joint_interface.registerHandle (right_wheel_vel_handle);
-    registerInterface(&velocity_joint_interface);
+  hardware_interface::JointHandle left_wheel_vel_handle(joint_state_interface.getHandle("left_wheel"),
+      &joints[0].cmd.data);
+  hardware_interface::JointHandle right_wheel_vel_handle(joint_state_interface.getHandle("right_wheel"),
+      &joints[1].cmd.data);
+  velocity_joint_interface.registerHandle (left_wheel_vel_handle);
+  velocity_joint_interface.registerHandle (right_wheel_vel_handle);
+  registerInterface(&velocity_joint_interface);
 
     // These publishers are only for debugging purposes
     left_pos_pub  = nh.advertise<std_msgs::Float64>("hoverboard/left_wheel/position", 3);
@@ -61,15 +61,18 @@ Hoverboard::Hoverboard() {
     left_cur_pub  = nh.advertise<std_msgs::Float64>("hoverboard/left_wheel/current", 3);
     right_cur_pub = nh.advertise<std_msgs::Float64>("hoverboard/right_wheel/current", 3);
     voltage_pub   = nh.advertise<std_msgs::Float64>("hoverboard/battery_voltage", 3);
-    
-    // FIXME! Read parameters from ROS
-    wheel_radius = WHEEL_RADIUS;
 
-    if ((port_fd = open(PORT, O_RDWR | O_NOCTTY | O_NDELAY)) < 0) {
+    ros::param::get("/robot/wheel_radius", _wheel_radius);
+    ROS_INFO("wheel radius: %f", _wheel_radius);
+
+    ros::param::get("/robot/serial_port", _serial_port);
+    ROS_INFO("serial port: %s", _serial_port.c_str());
+
+    if ((port_fd = open(_serial_port.c_str(), O_RDWR | O_NOCTTY | O_NDELAY)) < 0) {
         ROS_FATAL("Cannot open serial port to hoverboard");
         exit(-1);
     }
-    
+
     // CONFIGURE THE UART -- connecting to the board
     // The flags (defined in /usr/include/termios.h - see http://pubs.opengroup.org/onlinepubs/007908799/xsh/termios.h.html):
     struct termios options;
@@ -124,11 +127,11 @@ void Hoverboard::read() {
       last_read = ros::Time::now();
 
     if (r < 0 && errno != EAGAIN)
-      ROS_ERROR("Reading from serial %s failed: %d", PORT, r);
+      ROS_ERROR("Reading from serial %s failed: %d", _serial_port.c_str(), r);
   }
 
   if ((ros::Time::now() - last_read).toSec() > 1) {
-    ROS_FATAL("Timeout reading from serial %s failed", PORT);
+    ROS_FATAL("Timeout reading from serial %s failed", _serial_port.c_str());
   }
 }
 
@@ -177,12 +180,12 @@ void Hoverboard::write() {
     int right_pwm = joints[1].cmd.data * 30;
     api->sendDifferentialPWM (left_pwm, right_pwm);
     ROS_INFO("PWM send: %d %d", left_pwm, right_pwm);
-#else 
+#else
     // Cap according to dynamic_reconfigure
     // Convert rad/s to m/s
-    double left_speed = DIRECTION_CORRECTION * joints[0].cmd.data * wheel_radius;
-    double right_speed = DIRECTION_CORRECTION * joints[1].cmd.data * wheel_radius;
-    const int max_power = have_config ? config.MaxPwr : 100;    
+    double left_speed = DIRECTION_CORRECTION * joints[0].cmd.data * _wheel_radius;
+    double right_speed = DIRECTION_CORRECTION * joints[1].cmd.data * _wheel_radius;
+    const int max_power = have_config ? config.MaxPwr : 100;
     const int min_speed = have_config ? config.MinSpd : 40;
     api->sendSpeedData (left_speed, right_speed, max_power, min_speed);
     ROS_INFO("speed send: %lf %lf", left_speed, right_speed);
