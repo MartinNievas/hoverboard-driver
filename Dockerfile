@@ -4,10 +4,12 @@ WORKDIR /home/catkin_ws
 
 
 RUN apt update && \
-    apt install ros-melodic-tf2 -y &&\
-    apt install ros-melodic-hardware-interface -y &&\
-    apt install ros-melodic-controller-manager -y &&\
-    apt install ros-melodic-realtime-tools -y
+    apt install -y ros-melodic-tf2 \
+    ros-melodic-hardware-interface \
+    ros-melodic-joint-state-controller \
+    ros-melodic-diff-drive-controller \
+    ros-melodic-controller-manager \
+    ros-melodic-realtime-tools
 
 ## Setup environment variables
 RUN echo "source /opt/ros/melodic/setup.bash" >> /.bashrc
