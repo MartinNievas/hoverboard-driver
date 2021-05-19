@@ -36,9 +36,9 @@ hoverboard_velocity_controller:
   linear:
     x:
       has_velocity_limits    : true
-      max_velocity           : 10.25  # m/s
+      max_velocity           : 0.3  # m/s
       has_acceleration_limits: true
-      max_acceleration       : 1.0  # m/s^2
+      max_acceleration       : 0.05  # m/s^2
       has_jerk_limits        : true
       max_jerk               : 0.1  # m/s^3
   angular:

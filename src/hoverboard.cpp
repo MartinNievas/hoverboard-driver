@@ -97,7 +97,6 @@ Hoverboard::Hoverboard() {
     api->updateParamHandler(HoverboardAPI::Codes::sensHall, readCallback);
     api->updateParamHandler(HoverboardAPI::Codes::sensElectrical, readCallback);
 
-    api->disablePoweroffTimer();
 }
 
 Hoverboard::~Hoverboard() {
