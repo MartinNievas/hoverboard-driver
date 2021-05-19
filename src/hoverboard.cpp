@@ -29,25 +29,25 @@ Hoverboard& Hoverboard::getInstance() {
 }
 
 Hoverboard::Hoverboard() {
-    hardware_interface::JointStateHandle left_wheel_state_handle("left_wheel",
-								 &joints[0].pos.data,
-								 &joints[0].vel.data,
-								 &joints[0].eff.data);
-    hardware_interface::JointStateHandle right_wheel_state_handle("right_wheel",
-								  &joints[1].pos.data,
-								  &joints[1].vel.data,
-								  &joints[1].eff.data);
-    joint_state_interface.registerHandle (left_wheel_state_handle);
-    joint_state_interface.registerHandle (right_wheel_state_handle);
-    registerInterface(&joint_state_interface);
+  hardware_interface::JointStateHandle left_wheel_state_handle("left_wheel",
+      &joints[0].pos.data,
+      &joints[0].vel.data,
+      &joints[0].eff.data);
+  hardware_interface::JointStateHandle right_wheel_state_handle("right_wheel",
+      &joints[1].pos.data,
+      &joints[1].vel.data,
+      &joints[1].eff.data);
+  joint_state_interface.registerHandle (left_wheel_state_handle);
+  joint_state_interface.registerHandle (right_wheel_state_handle);
+  registerInterface(&joint_state_interface);
 
-    hardware_interface::JointHandle left_wheel_vel_handle(joint_state_interface.getHandle("left_wheel"),
-							  &joints[0].cmd.data);
-    hardware_interface::JointHandle right_wheel_vel_handle(joint_state_interface.getHandle("right_wheel"),
-							   &joints[1].cmd.data);
-    velocity_joint_interface.registerHandle (left_wheel_vel_handle);
-    velocity_joint_interface.registerHandle (right_wheel_vel_handle);
-    registerInterface(&velocity_joint_interface);
+  hardware_interface::JointHandle left_wheel_vel_handle(joint_state_interface.getHandle("left_wheel"),
+      &joints[0].cmd.data);
+  hardware_interface::JointHandle right_wheel_vel_handle(joint_state_interface.getHandle("right_wheel"),
+      &joints[1].cmd.data);
+  velocity_joint_interface.registerHandle (left_wheel_vel_handle);
+  velocity_joint_interface.registerHandle (right_wheel_vel_handle);
+  registerInterface(&velocity_joint_interface);
 
     // These publishers are only for debugging purposes
     left_pos_pub  = nh.advertise<std_msgs::Float64>("hoverboard/left_wheel/position", 3);
@@ -180,12 +180,12 @@ void Hoverboard::write() {
     int right_pwm = joints[1].cmd.data * 30;
     api->sendDifferentialPWM (left_pwm, right_pwm);
     ROS_INFO("PWM send: %d %d", left_pwm, right_pwm);
-#else 
+#else
     // Cap according to dynamic_reconfigure
     // Convert rad/s to m/s
     double left_speed = DIRECTION_CORRECTION * joints[0].cmd.data * _wheel_radius;
     double right_speed = DIRECTION_CORRECTION * joints[1].cmd.data * _wheel_radius;
-    const int max_power = have_config ? config.MaxPwr : 100;    
+    const int max_power = have_config ? config.MaxPwr : 100;
     const int min_speed = have_config ? config.MinSpd : 40;
     api->sendSpeedData (left_speed, right_speed, max_power, min_speed);
     ROS_INFO("speed send: %lf %lf", left_speed, right_speed);

@@ -14,7 +14,7 @@ class Hoverboard : public hardware_interface::RobotHW {
 public:
     static Hoverboard& getInstance();
     ~Hoverboard();
-    
+
     void read();
     void write();
     void tick();
@@ -23,7 +23,7 @@ public:
     void electricalCallback();
  private:
     Hoverboard();
- 
+
     hardware_interface::JointStateInterface joint_state_interface;
     hardware_interface::VelocityJointInterface velocity_joint_interface;
 

@@ -13,7 +13,12 @@ int main(int argc, char **argv) {
     spinner.start();
 
     ros::Time prev_time = ros::Time::now();
-    ros::Rate rate(50.0);
+
+    float loop_hz;
+    ros::param::get("/robot/hardware_interface/loop_hz", loop_hz);
+    ROS_INFO("main loop rate [Hz]: %f", loop_hz);
+
+    ros::Rate rate(loop_hz);
 
     while (ros::ok()) {
         const ros::Time time = ros::Time::now();
