@@ -1,6 +1,8 @@
-robaka:
+robot:
   hardware_interface:
      loop_hz: 50 # hz
      joints:
        - left_wheel
        - right_wheel
+  wheel_radius: 0.0825
+  serial_port: '/dev/ttyUSB0'
