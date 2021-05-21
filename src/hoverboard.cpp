@@ -14,6 +14,7 @@ int serialWrite(unsigned char *data, int len) {
 }
 
 void readCallback(PROTOCOL_STAT* s, PARAMSTAT* param, uint8_t fn_type, unsigned char* content, int len) {
+  ROS_INFO("Read Callback");
   if (fn_type == FN_TYPE_POST_READRESPONSE) {
     if (param->code == HoverboardAPI::Codes::sensHall) {
       Hoverboard::getInstance().hallCallback();
@@ -99,6 +100,7 @@ Hoverboard::Hoverboard() {
 
     api->updateParamHandler(HoverboardAPI::Codes::sensHall, readCallback);
     api->updateParamHandler(HoverboardAPI::Codes::sensElectrical, readCallback);
+    api->requestRead(HoverboardAPI::Codes::sensHall, PROTOCOL_SOM_NOACK);
 
 }
 
@@ -135,6 +137,8 @@ void Hoverboard::read() {
   if ((ros::Time::now() - last_read).toSec() > 1) {
     ROS_FATAL("Timeout reading from serial %s failed", _serial_port.c_str());
   }
+
+  api->requestRead(HoverboardAPI::Codes::sensHall, PROTOCOL_SOM_NOACK);
 }
 
 void Hoverboard::hallCallback() {
