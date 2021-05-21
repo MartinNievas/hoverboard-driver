@@ -68,6 +68,9 @@ Hoverboard::Hoverboard() {
     ros::param::get("/robot/wheel_radius", _wheel_radius);
     ROS_INFO("wheel radius: %f", _wheel_radius);
 
+    ros::param::get("/robot/distance_betwen_wheels", _length_between_wheels);
+    ROS_INFO("wheel separation: %f", _length_between_wheels);
+
     ros::param::get("/robot/serial_port", _serial_port);
     ROS_INFO("serial port: %s", _serial_port.c_str());
 
@@ -173,13 +176,12 @@ void Hoverboard::hallCallback() {
 
     current_time = ros::Time::now();
 
-    double v_right = joints[0].vel.data;
-    double v_left = joints[1].vel.data;
-    double lengthBetweenTwoWheels = 0.45;
+    double v_right = joints[0].vel.data; // right_wheel speed in m/s
+    double v_left = joints[1].vel.data; // left_wheel speed in m/s
 
-    robot_vx = ((v_right + v_left) / 2)*10;
+    robot_vx = ((v_right + v_left) / 2);
     robot_vy = 0;
-    robot_vth = ((v_right - v_left)/lengthBetweenTwoWheels)*10;
+    robot_vth = ((v_right - v_left)/_length_between_wheels);
 
     //compute odometry in a typical way given the velocities of the robot
     double dt = (current_time - last_time).toSec();

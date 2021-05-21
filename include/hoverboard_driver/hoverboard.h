@@ -45,6 +45,7 @@ public:
     ros::Time current_time, last_time;
 
     float _wheel_radius;
+    double _length_between_wheels;
     float _direction_correction;
     std::string _serial_port;
     ros::Time last_read;
