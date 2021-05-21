@@ -99,6 +99,7 @@ Hoverboard::Hoverboard() {
 
     api->updateParamHandler(HoverboardAPI::Codes::sensHall, readCallback);
     api->updateParamHandler(HoverboardAPI::Codes::sensElectrical, readCallback);
+    api->requestRead(HoverboardAPI::Codes::sensHall, PROTOCOL_SOM_NOACK);
 
 }
 
@@ -135,6 +136,9 @@ void Hoverboard::read() {
   if ((ros::Time::now() - last_read).toSec() > 1) {
     ROS_FATAL("Timeout reading from serial %s failed", _serial_port.c_str());
   }
+
+  api->requestRead(HoverboardAPI::Codes::sensHall, PROTOCOL_SOM_NOACK);
+  api->requestRead(HoverboardAPI::Codes::sensElectrical, PROTOCOL_SOM_NOACK);
 }
 
 void Hoverboard::hallCallback() {
