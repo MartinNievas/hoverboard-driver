@@ -68,6 +68,9 @@ Hoverboard::Hoverboard() {
     ros::param::get("/robot/serial_port", _serial_port);
     ROS_INFO("serial port: %s", _serial_port.c_str());
 
+    ros::param::get("/robot/direction_correction", _direction_correction);
+    ROS_INFO("Wheel direction: %f", _direction_correction);
+
     if ((port_fd = open(_serial_port.c_str(), O_RDWR | O_NOCTTY | O_NDELAY)) < 0) {
         ROS_FATAL("Cannot open serial port to hoverboard");
         exit(-1);
@@ -139,10 +142,12 @@ void Hoverboard::hallCallback() {
     double sens_speed0 = api->getSpeed0_mms();
     double sens_speed1 = api->getSpeed1_mms();
 
-    joints[0].vel.data = DIRECTION_CORRECTION * (sens_speed0 / 1000.0);
-    joints[1].vel.data = DIRECTION_CORRECTION * (sens_speed1 / 1000.0);
-    joints[0].pos.data = DIRECTION_CORRECTION * (api->getPosition0_mm() / 1000.0);
-    joints[1].pos.data = DIRECTION_CORRECTION * (api->getPosition1_mm() / 1000.0);
+    ros::param::get("/robot/direction_correction", _direction_correction);
+
+    joints[0].vel.data = _direction_correction * (sens_speed0 / 1000.0);
+    joints[1].vel.data = _direction_correction * (sens_speed1 / 1000.0);
+    joints[0].pos.data = _direction_correction * (api->getPosition0_mm() / 1000.0);
+    joints[1].pos.data = _direction_correction * (api->getPosition1_mm() / 1000.0);
     left_vel_pub.publish(joints[0].vel);
     right_vel_pub.publish(joints[1].vel);
     left_pos_pub.publish(joints[0].pos);
@@ -182,8 +187,9 @@ void Hoverboard::write() {
 #else
     // Cap according to dynamic_reconfigure
     // Convert rad/s to m/s
-    double left_speed = DIRECTION_CORRECTION * joints[0].cmd.data * _wheel_radius;
-    double right_speed = DIRECTION_CORRECTION * joints[1].cmd.data * _wheel_radius;
+
+    double left_speed = _direction_correction * joints[0].cmd.data * _wheel_radius;
+    double right_speed = _direction_correction * joints[1].cmd.data * _wheel_radius;
     const int max_power = have_config ? config.MaxPwr : 100;
     const int min_speed = have_config ? config.MinSpd : 40;
     api->sendSpeedData (left_speed, right_speed, max_power, min_speed);

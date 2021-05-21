@@ -5,4 +5,5 @@ robot:
        - left_wheel
        - right_wheel
   wheel_radius: 0.0825
+  direction_correction: 1
   serial_port: '/dev/ttyUSB0'
