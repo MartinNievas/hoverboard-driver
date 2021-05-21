@@ -5,6 +5,7 @@
 #include <hardware_interface/robot_hw.h>
 #include <realtime_tools/realtime_buffer.h>
 #include <std_msgs/Float64.h>
+#include <nav_msgs/Odometry.h>
 #include <dynamic_reconfigure/server.h>
 #include "hoverboard_driver/HoverboardConfig.h"
 
@@ -35,6 +36,14 @@ public:
         std_msgs::Float64 cmd;
     } joints[2];
 
+    double robot_x = 0.0;
+    double robot_y = 0.0;
+    double robot_th = 0.0;
+    double robot_vx = 0.1;
+    double robot_vy = 0.0;
+    double robot_vth = 0.1;
+    ros::Time current_time, last_time;
+
     float _wheel_radius;
     float _direction_correction;
     std::string _serial_port;
@@ -49,6 +58,8 @@ public:
     ros::Publisher left_cmd_pub, right_cmd_pub;
     ros::Publisher left_cur_pub, right_cur_pub;
     ros::Publisher voltage_pub;
+
+    ros::Publisher odom_test;
 
     // Supporting dynamic reconfigure for PID control
     dynamic_reconfigure::Server<hoverboard_driver::HoverboardConfig> *dsrv;

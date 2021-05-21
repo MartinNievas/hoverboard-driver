@@ -62,6 +62,9 @@ Hoverboard::Hoverboard() {
     right_cur_pub = nh.advertise<std_msgs::Float64>("hoverboard/right_wheel/current", 3);
     voltage_pub   = nh.advertise<std_msgs::Float64>("hoverboard/battery_voltage", 3);
 
+    // nav_msgs/Odometry
+    odom_test  = nh.advertise<nav_msgs::Odometry>("hoverboard/odom", 3);
+
     ros::param::get("/robot/wheel_radius", _wheel_radius);
     ROS_INFO("wheel radius: %f", _wheel_radius);
 
@@ -100,6 +103,9 @@ Hoverboard::Hoverboard() {
     api->updateParamHandler(HoverboardAPI::Codes::sensHall, readCallback);
     api->updateParamHandler(HoverboardAPI::Codes::sensElectrical, readCallback);
     api->requestRead(HoverboardAPI::Codes::sensHall, PROTOCOL_SOM_NOACK);
+
+    current_time = ros::Time::now();
+    last_time = ros::Time::now();
 
 }
 
@@ -156,6 +162,29 @@ void Hoverboard::hallCallback() {
     right_vel_pub.publish(joints[1].vel);
     left_pos_pub.publish(joints[0].pos);
     right_pos_pub.publish(joints[1].pos);
+
+
+    nav_msgs::Odometry odom;
+    odom.header.stamp = current_time;
+    odom.header.frame_id = "odom";
+
+    //set the position
+    odom.pose.pose.position.x = robot_x;
+    odom.pose.pose.position.y = robot_y;
+    odom.pose.pose.position.z = 0.0;
+
+    // odom.pose.pose.orientation = odom_quat;
+
+    //set the velocity
+    odom.child_frame_id = "base_link";
+    odom.twist.twist.linear.x = robot_vx;
+    odom.twist.twist.linear.y = robot_vy;
+    odom.twist.twist.angular.z = robot_vth;
+
+    //publish the message
+    odom_test.publish(odom);
+
+    last_time = current_time;
 
     // printf("[%.3f, %.3f] -> [%.3f, %.3f]\n", sens_speed0, sens_speed1, joints[0].vel.data, joints[1].vel.data);
 }
