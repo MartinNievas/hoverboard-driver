@@ -107,6 +107,14 @@ Hoverboard::Hoverboard() {
     current_time = ros::Time::now();
     last_time = ros::Time::now();
 
+    robot_x = 0.0;
+    robot_y = 0.0;
+    robot_th = 0.0;
+
+    robot_vx = 0.0;
+    robot_vy = 0.0;
+    robot_vth = 0.0;
+
 }
 
 Hoverboard::~Hoverboard() {
@@ -163,6 +171,25 @@ void Hoverboard::hallCallback() {
     left_pos_pub.publish(joints[0].pos);
     right_pos_pub.publish(joints[1].pos);
 
+    current_time = ros::Time::now();
+
+    double v_right = joints[0].vel.data;
+    double v_left = joints[1].vel.data;
+    double lengthBetweenTwoWheels = 0.45;
+
+    robot_vx = ((v_right + v_left) / 2)*10;
+    robot_vy = 0;
+    robot_vth = ((v_right - v_left)/lengthBetweenTwoWheels)*10;
+
+    //compute odometry in a typical way given the velocities of the robot
+    double dt = (current_time - last_time).toSec();
+    double delta_x = (robot_vx * cos(robot_th) - robot_vy * sin(robot_th)) * dt;
+    double delta_y = (robot_vx * sin(robot_th) + robot_vy * cos(robot_th)) * dt;
+    double delta_th = robot_vth * dt;
+
+    robot_x += delta_x;
+    robot_y += delta_y;
+    robot_th += delta_th;
 
     nav_msgs::Odometry odom;
     odom.header.stamp = current_time;
