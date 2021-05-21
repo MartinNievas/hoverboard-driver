@@ -17,10 +17,8 @@ void readCallback(PROTOCOL_STAT* s, PARAMSTAT* param, uint8_t fn_type, unsigned 
   if (fn_type == FN_TYPE_POST_READRESPONSE) {
     if (param->code == HoverboardAPI::Codes::sensHall) {
       Hoverboard::getInstance().hallCallback();
-      ROS_INFO("Read hall");
     } else if (param->code == HoverboardAPI::Codes::sensElectrical) {
       Hoverboard::getInstance().electricalCallback();
-      ROS_INFO("Read electrical");
     }
   }
 }
