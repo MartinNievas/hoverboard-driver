@@ -14,12 +14,13 @@ int serialWrite(unsigned char *data, int len) {
 }
 
 void readCallback(PROTOCOL_STAT* s, PARAMSTAT* param, uint8_t fn_type, unsigned char* content, int len) {
-  ROS_INFO("Read Callback");
   if (fn_type == FN_TYPE_POST_READRESPONSE) {
     if (param->code == HoverboardAPI::Codes::sensHall) {
       Hoverboard::getInstance().hallCallback();
+      ROS_INFO("Read hall");
     } else if (param->code == HoverboardAPI::Codes::sensElectrical) {
       Hoverboard::getInstance().electricalCallback();
+      ROS_INFO("Read electrical");
     }
   }
 }
@@ -139,6 +140,7 @@ void Hoverboard::read() {
   }
 
   api->requestRead(HoverboardAPI::Codes::sensHall, PROTOCOL_SOM_NOACK);
+  api->requestRead(HoverboardAPI::Codes::sensElectrical, PROTOCOL_SOM_NOACK);
 }
 
 void Hoverboard::hallCallback() {
