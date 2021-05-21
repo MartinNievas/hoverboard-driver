@@ -36,6 +36,7 @@ public:
     } joints[2];
 
     float _wheel_radius;
+    float _direction_correction;
     std::string _serial_port;
     ros::Time last_read;
     HoverboardAPI *api;
