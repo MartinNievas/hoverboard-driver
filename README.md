@@ -7,3 +7,13 @@ Clone with submodules:
 ```
 git clone --recurse-submodules git@github.com:alex-makarov/hoverboard-driver.git
 ```
+## Run inside Docker container
+Build Docker image with:
+```bash
+docker build -t hoverboard-driver:0.1 .
+```
+
+Start the container with:
+```bash
+docker run -it --net=host -v ${PWD}:/home/catkin_ws/src/hoverboard-driver --device=/dev/ttyUSB0 hoverboard-driver:0.1
+```
